@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F & M Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #490a1e;
+  color: #e9c785;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  overflow-x: hidden;
+}
+
+/* SECOND PAGE */
+
+.invitation {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 50px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle, #81223c, #490a1e);
+}
+
+.invitation-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 80vh;
+  border: 2px solid #c9a45e;
+  outline: 1px solid #c9a45e;
+  outline-offset: -12px;
+  padding: 65px 25px;
+  text-align: center;
+  position: relative;
+  background:
+    radial-gradient(circle at top left,
+      #922f49 0%, transparent 45%),
+    #570e25;
+  box-shadow: 0 15px 50px #26000d;
+}
+
+.flower {
+  position: absolute;
+  font-size: 36px;
+  color: #d9b46d;
+}
+
+.top-left {
+  top: 20px;
+  left: 25px;
+}
+
+.top-right {
+  top: 20px;
+  right: 25px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 25px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 25px;
+}
+
+.arabic {
+  font-size: clamp(23px, 5vw, 36px);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.names {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(39px, 8vw, 65px);
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 25px 0;
+}
+
+.ampersand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+}
+
+.date {
+  margin-top: 35px;
+  font-size: clamp(20px, 4vw, 29px);
+  letter-spacing: 2px;
+}
+
+.divider {
+  margin: 30px auto;
+  width: 150px;
+  height: 1px;
+  background: #c9a45e;
+}
+
+/* FIRST PAGE COVER */
+
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  perspective: 1800px;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cover-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("assets/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  backface-visibility: hidden;
+  transition: transform 2s cubic-bezier(
+    0.65, 0, 0.25, 1
+  );
+}
+
+.left {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+}
+
+.right {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+}
+
+/* IMAGE SPLITS OPEN */
+
+.cover.open .left {
+  transform: rotateY(-110deg);
+}
+
+.cover.open .right {
+  transform: rotateY(110deg);
+}
+
+/* TAP TO OPEN */
+
+.tap-text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #f5dcaa;
+  text-shadow: 0 2px 8px #25000b;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.cover.open .tap-text {
+  opacity: 0;
+  animation: none;
+}
+
+@media (max-width: 600px) {
+  .invitation-card {
+    padding: 65px 18px;
+  }
+
+  .flower {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-half {
+    transition-duration: 0.01s;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECOND PAGE: WEDDING ANNOUNCEMENT -->
+
+<main class="invitation">
+
+  <div class="invitation-card">
+
+    <span class="flower top-left">❦</span>
+    <span class="flower top-right">❦</span>
+    <span class="flower bottom-left">❦</span>
+    <span class="flower bottom-right">❦</span>
+
+    <div class="arabic" lang="ar" dir="rtl">
+      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+    </div>
+
+    <p class="subtitle">
+      In the name of Allah, the Entirely<br>
+      Merciful, the Especially Merciful.
+    </p>
+
+    <div class="divider"></div>
+
+    <h1 class="names">
+      Muhammad Faizan
+      <br>
+      <span class="ampersand">&amp;</span>
+      <br>
+      Sidra tul-Muntaha
+    </h1>
+
+    <p class="subtitle">
+      Together with their families<br>
+      cordially invite you to<br>
+      their wedding
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="date">
+      DECEMBER 3–6, 2026
+    </p>
+
+  </div>
+
+</main>
+
+<!-- FIRST PAGE: YOUR UPLOADED IMAGE -->
+
+<div class="cover"
+     id="cover"
+     role="button"
+     tabindex="0"
+     aria-label="Tap to open wedding invitation">
+
+  <div class="cover-half left"></div>
+  <div class="cover-half right"></div>
+
+  <div class="tap-text">
+    TAP TO OPEN
+  </div>
+
+</div>
+
+<script>
+const cover = document.getElementById("cover");
+
+function openInvitation() {
+  if (cover.classList.contains("open")) return;
+
+  cover.classList.add("open");
+
+  setTimeout(() => {
+    cover.style.display = "none";
+  }, 2100);
+}
+
+cover.addEventListener("click", openInvitation);
+
+cover.addEventListener("keydown", function(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    openInvitation();
+  }
+});
+</script>
+
+</body>
+</html>

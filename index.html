@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#580b23">
 
-<title>F & M | Wedding Invitation</title>
+<title>Faizan & Sidra | Wedding Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -49,9 +49,8 @@ button {
   cursor: pointer;
 }
 
-/* BACKGROUND */
-
 main {
+  position: relative;
   background:
     radial-gradient(
       ellipse at 50% 12%,
@@ -95,7 +94,7 @@ section {
   );
 }
 
-/* FIRST PAGE: OPENING COVER */
+/* OPENING COVER */
 
 .cover {
   position: fixed;
@@ -116,9 +115,7 @@ section {
   background-repeat: no-repeat;
   background-size: 200% 100%;
   backface-visibility: hidden;
-  transition: transform 2s cubic-bezier(
-    .65, 0, .25, 1
-  );
+  transition: transform 2s cubic-bezier(.65, 0, .25, 1);
 }
 
 .cover-left {
@@ -150,7 +147,61 @@ section {
   display: none;
 }
 
-/* FANCY WELCOME PAGE */
+/* GOLDEN SPARKLES */
+
+.sparkles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+body.opened .sparkles-container {
+  opacity: 1;
+}
+
+.gold-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffe5a0;
+  box-shadow:
+    0 0 7px 2px rgba(255, 218, 125, .7),
+    0 0 18px rgba(255, 218, 125, .35);
+  opacity: 0;
+  animation: sparkleFloat linear infinite;
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: translateY(20px) scale(.3);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .8;
+  }
+
+  50% {
+    transform: translateY(-25px) scale(1.2);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: .5;
+  }
+
+  100% {
+    transform: translateY(-70px) scale(.2);
+    opacity: 0;
+  }
+}
+
+/* WELCOME PAGE */
 
 .welcome {
   min-height: 100vh;
@@ -180,6 +231,7 @@ section {
 
   box-shadow:
     0 0 0 7px rgba(217,182,111,.07),
+    0 0 35px rgba(217,182,111,.15),
     inset 0 0 45px rgba(0,0,0,.2),
     0 20px 65px rgba(0,0,0,.25);
 }
@@ -271,7 +323,7 @@ section {
   margin-top: 28px;
 }
 
-/* SMALL SCROLL HINT */
+/* SCROLL HINT */
 
 .scroll-hint {
   position: absolute;
@@ -329,7 +381,7 @@ section {
   margin: 0 14px;
 }
 
-/* MEHNDI AND WALIMA CARDS */
+/* EVENT CARDS */
 
 .events {
   padding: 20px 16px 90px;
@@ -351,8 +403,9 @@ section {
     );
 
   box-shadow:
-    0 15px 45px rgba(0,0,0,.25),
-    0 0 22px rgba(217,182,111,.12);
+    0 0 0 5px rgba(217,182,111,.08),
+    0 0 35px rgba(217,182,111,.15),
+    0 20px 60px rgba(0,0,0,.3);
 }
 
 .event-inner {
@@ -542,7 +595,7 @@ section {
   color: var(--cream);
 }
 
-/* FLOATING MUSIC BUTTON */
+/* MUSIC BUTTON */
 
 .music-button {
   position: fixed;
@@ -666,9 +719,8 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
+  .sparkles-container {
+    display: none;
   }
 
   .reveal {
@@ -681,9 +733,15 @@ section {
 
 <body>
 
+<!-- GOLDEN SPARKLES -->
+
+<div class="sparkles-container"
+     id="sparklesContainer"
+     aria-hidden="true"></div>
+
 <main>
 
-<!-- WELCOME PAGE -->
+<!-- WELCOME -->
 
 <section class="welcome" id="welcome">
 
@@ -737,12 +795,11 @@ section {
 
 </section>
 
-<!-- JOIN US -->
+<!-- CELEBRATION INTRO -->
 
 <section class="celebrate reveal" id="celebrate">
 
   <div class="ornament">❧ ✦ ❧</div>
-
   <div class="gold-line"></div>
 
   <h2>Join Us to Celebrate</h2>
@@ -755,9 +812,11 @@ section {
 
 </section>
 
-<!-- MEHNDI CARD -->
+<!-- EVENTS -->
 
 <section class="events">
+
+  <!-- MEHNDI -->
 
   <article class="event-card reveal">
 
@@ -809,7 +868,7 @@ section {
 
   </article>
 
-  <!-- WALIMA CARD -->
+  <!-- WALIMA -->
 
   <article class="event-card reveal">
 
@@ -924,7 +983,7 @@ section {
 
 </main>
 
-<!-- FIRST PAGE COVER -->
+<!-- OPENING COVER -->
 
 <div class="cover"
      id="cover"
@@ -937,13 +996,12 @@ section {
 
 </div>
 
-<!-- WEDDING BACKGROUND MUSIC -->
+<!-- MUSIC: SUPPORTS M4A AND MP3 -->
 
 <audio id="weddingMusic" loop preload="auto">
-<source src="wedding-music.m4a" type="audio/mp4">
+  <source src="wedding-music.m4a" type="audio/mp4">
+  <source src="wedding-music.mp3" type="audio/mpeg">
 </audio>
-
-<!-- FLOATING MUSIC BUTTON -->
 
 <button
   id="musicButton"
@@ -956,7 +1014,7 @@ section {
 
 <script>
 
-/* COVER AND MUSIC */
+/* OPENING COVER AND MUSIC */
 
 const cover = document.getElementById("cover");
 const weddingMusic = document.getElementById("weddingMusic");
@@ -970,7 +1028,12 @@ function updateMusicButton() {
 
   musicIcon.textContent = playing ? "♫" : "♪";
   musicButton.classList.toggle("playing", playing);
-  musicButton.setAttribute("aria-pressed", String(playing));
+
+  musicButton.setAttribute(
+    "aria-pressed",
+    String(playing)
+  );
+
   musicButton.setAttribute(
     "aria-label",
     playing ? "Pause wedding music" : "Play wedding music"
@@ -983,8 +1046,9 @@ function openInvitation() {
 
   cover.classList.add("open");
 
-  // Start music immediately on the user's tap.
+  // Start music on the cover tap.
   musicButton.hidden = false;
+
   weddingMusic.play().catch(() => {
     updateMusicButton();
   });
@@ -995,7 +1059,6 @@ function openInvitation() {
     window.scrollTo(0, 0);
     revealSections();
   }, 2000);
-
 }
 
 cover.addEventListener("click", openInvitation);
@@ -1021,7 +1084,34 @@ weddingMusic.addEventListener("play", updateMusicButton);
 weddingMusic.addEventListener("pause", updateMusicButton);
 weddingMusic.addEventListener("error", updateMusicButton);
 
-/* SCROLL ANIMATIONS */
+/* CREATE GOLDEN SPARKLES */
+
+const sparklesContainer =
+  document.getElementById("sparklesContainer");
+
+for (let i = 0; i < 35; i++) {
+  const sparkle = document.createElement("span");
+
+  sparkle.className = "gold-sparkle";
+
+  sparkle.style.left = Math.random() * 100 + "%";
+  sparkle.style.top = Math.random() * 100 + "%";
+
+  const size = 2 + Math.random() * 3;
+
+  sparkle.style.width = size + "px";
+  sparkle.style.height = size + "px";
+
+  sparkle.style.animationDuration =
+    (4 + Math.random() * 5) + "s";
+
+  sparkle.style.animationDelay =
+    (-Math.random() * 9) + "s";
+
+  sparklesContainer.appendChild(sparkle);
+}
+
+/* SCROLL REVEAL */
 
 const revealItems =
   document.querySelectorAll(".reveal");
@@ -1043,6 +1133,7 @@ revealItems.forEach(item => observer.observe(item));
 function revealSections() {
   revealItems.forEach(item => {
     const rect = item.getBoundingClientRect();
+
     if (rect.top < window.innerHeight) {
       item.classList.add("visible");
     }
@@ -1055,7 +1146,7 @@ function mehndiLocation() {
   alert("Location Coming Soon");
 }
 
-/* SAVE DATE CALENDAR */
+/* SAVE DATE */
 
 function saveDate(eventType) {
 
@@ -1065,7 +1156,6 @@ function saveDate(eventType) {
     ? "Muhammad Faizan & Sidra tul-Muntaha - Mehndi"
     : "Muhammad Faizan & Sidra tul-Muntaha - Walima";
 
-  // UTC times correspond to Pakistan Standard Time (UTC+5).
   const start = isMehndi
     ? "20261203T130000Z"
     : "20261206T130000Z";
@@ -1125,8 +1215,7 @@ const weddingDate =
 
 function updateCountdown() {
 
-  const now = Date.now();
-  const difference = weddingDate - now;
+  const difference = weddingDate - Date.now();
 
   if (difference <= 0) {
     document.getElementById("countdown").innerHTML =
@@ -1163,4 +1252,3 @@ setInterval(updateCountdown, 1000);
 
 </body>
 </html>
-

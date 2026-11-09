@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>F & M Wedding Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,76 +16,46 @@
 
 html, body {
   margin: 0;
-  padding: 0;
-  background: #490a1e;
-  color: #e9c785;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #470819;
 }
 
-body {
-  font-family: "Cormorant Garamond", serif;
-  overflow-x: hidden;
-}
+/* THE SECOND PAGE */
 
-/* SECOND PAGE */
-
-.invitation {
-  min-height: 100vh;
-  min-height: 100dvh;
-  padding: 50px 25px;
+.second-page {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  background: radial-gradient(
+    circle,
+    #85203e 0%,
+    #470819 100%
+  );
+  color: #e8c583;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(circle, #81223c, #490a1e);
+  padding: 30px 20px;
+  font-family: "Cormorant Garamond", serif;
 }
 
-.invitation-card {
+.card {
   width: 100%;
   max-width: 650px;
-  min-height: 80vh;
-  border: 2px solid #c9a45e;
-  outline: 1px solid #c9a45e;
+  min-height: 80%;
+  border: 2px solid #d5ae6b;
+  outline: 1px solid #d5ae6b;
   outline-offset: -12px;
   padding: 65px 25px;
   text-align: center;
-  position: relative;
-  background:
-    radial-gradient(circle at top left,
-      #922f49 0%, transparent 45%),
-    #570e25;
-  box-shadow: 0 15px 50px #26000d;
-}
-
-.flower {
-  position: absolute;
-  font-size: 36px;
-  color: #d9b46d;
-}
-
-.top-left {
-  top: 20px;
-  left: 25px;
-}
-
-.top-right {
-  top: 20px;
-  right: 25px;
-}
-
-.bottom-left {
-  bottom: 20px;
-  left: 25px;
-}
-
-.bottom-right {
-  bottom: 20px;
-  right: 25px;
+  box-shadow: 0 10px 40px #2c0010;
 }
 
 .arabic {
-  font-size: clamp(23px, 5vw, 36px);
+  font-size: clamp(24px, 6vw, 38px);
   line-height: 1.8;
-  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -94,53 +65,48 @@ body {
 
 .names {
   font-family: "Great Vibes", cursive;
-  font-size: clamp(39px, 8vw, 65px);
   font-weight: normal;
+  font-size: clamp(40px, 8vw, 65px);
   line-height: 1.5;
-  margin: 25px 0;
-}
-
-.ampersand {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 35px;
-}
-
-.date {
-  margin-top: 35px;
-  font-size: clamp(20px, 4vw, 29px);
-  letter-spacing: 2px;
 }
 
 .divider {
-  margin: 30px auto;
   width: 150px;
   height: 1px;
-  background: #c9a45e;
+  background: #d5ae6b;
+  margin: 30px auto;
 }
 
-/* FIRST PAGE COVER */
+.date {
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+/* FIRST PAGE - IMAGE COVER */
 
 .cover {
   position: fixed;
   inset: 0;
   z-index: 100;
-  perspective: 1800px;
-  cursor: pointer;
   overflow: hidden;
-  background: transparent;
+  perspective: 1600px;
+  cursor: pointer;
+  background: #470819;
 }
 
-.cover-half {
+/* IMAGE SPLIT INTO TWO HALVES */
+
+.half {
   position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
-  background-image: url("assets/cover.jpg");
+  background-image: url("cover.jpg");
   background-repeat: no-repeat;
   background-size: 200% 100%;
   backface-visibility: hidden;
   transition: transform 2s cubic-bezier(
-    0.65, 0, 0.25, 1
+    .65, 0, .25, 1
   );
 }
 
@@ -156,7 +122,12 @@ body {
   transform-origin: right center;
 }
 
-/* IMAGE SPLITS OPEN */
+/* OPENING EFFECT */
+
+.cover.open {
+  background: transparent;
+  pointer-events: none;
+}
 
 .cover.open .left {
   transform: rotateY(-110deg);
@@ -166,45 +137,17 @@ body {
   transform: rotateY(110deg);
 }
 
-/* TAP TO OPEN */
+/* HIDE THE COVER AFTER OPENING */
 
-.tap-text {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
-  letter-spacing: 3px;
-  color: #f5dcaa;
-  text-shadow: 0 2px 8px #25000b;
-  white-space: nowrap;
-  pointer-events: none;
-  animation: pulse 2s infinite;
+.cover.hidden {
+  display: none;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-.cover.open .tap-text {
-  opacity: 0;
-  animation: none;
-}
+/* MOBILE */
 
 @media (max-width: 600px) {
-  .invitation-card {
-    padding: 65px 18px;
-  }
-
-  .flower {
-    font-size: 25px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cover-half {
-    transition-duration: 0.01s;
+  .card {
+    padding: 55px 20px;
   }
 }
 </style>
@@ -212,23 +155,18 @@ body {
 
 <body>
 
-<!-- SECOND PAGE: WEDDING ANNOUNCEMENT -->
+<!-- SECOND PAGE: HIDDEN BEHIND COVER -->
 
-<main class="invitation">
+<section class="second-page">
 
-  <div class="invitation-card">
-
-    <span class="flower top-left">❦</span>
-    <span class="flower top-right">❦</span>
-    <span class="flower bottom-left">❦</span>
-    <span class="flower bottom-right">❦</span>
+  <div class="card">
 
     <div class="arabic" lang="ar" dir="rtl">
       بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
     </div>
 
     <p class="subtitle">
-      In the name of Allah, the Entirely<br>
+      In the name of Allah, the Entirely
       Merciful, the Especially Merciful.
     </p>
 
@@ -237,15 +175,14 @@ body {
     <h1 class="names">
       Muhammad Faizan
       <br>
-      <span class="ampersand">&amp;</span>
+      &amp;
       <br>
       Sidra tul-Muntaha
     </h1>
 
     <p class="subtitle">
       Together with their families<br>
-      cordially invite you to<br>
-      their wedding
+      cordially invite you to their wedding
     </p>
 
     <div class="divider"></div>
@@ -256,36 +193,35 @@ body {
 
   </div>
 
-</main>
+</section>
 
-<!-- FIRST PAGE: YOUR UPLOADED IMAGE -->
+<!-- FIRST PAGE: ONLY YOUR IMAGE -->
 
 <div class="cover"
      id="cover"
      role="button"
      tabindex="0"
-     aria-label="Tap to open wedding invitation">
+     aria-label="Open wedding invitation">
 
-  <div class="cover-half left"></div>
-  <div class="cover-half right"></div>
-
-  <div class="tap-text">
-    TAP TO OPEN
-  </div>
+  <div class="half left"></div>
+  <div class="half right"></div>
 
 </div>
 
 <script>
+
 const cover = document.getElementById("cover");
 
 function openInvitation() {
+
   if (cover.classList.contains("open")) return;
 
   cover.classList.add("open");
 
-  setTimeout(() => {
-    cover.style.display = "none";
+  setTimeout(function() {
+    cover.classList.add("hidden");
   }, 2100);
+
 }
 
 cover.addEventListener("click", openInvitation);
@@ -296,6 +232,7 @@ cover.addEventListener("keydown", function(event) {
     openInvitation();
   }
 });
+
 </script>
 
 </body>

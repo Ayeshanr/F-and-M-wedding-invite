@@ -19,8 +19,13 @@
   --ivory:#fff0dc;
 }
 
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
 
 body {
   margin:0;
@@ -35,16 +40,32 @@ body.opened {
   overflow-y:auto;
 }
 
-button {cursor:pointer}
+button {
+  cursor:pointer;
+}
 
-/* CONTINUOUS BURGUNDY BACKGROUND */
+/* DARK BURGUNDY BACKGROUND */
 
 main {
   position:relative;
   background:
-    radial-gradient(ellipse at 50% 18%,rgba(139,25,55,.32),transparent 48%),
-    radial-gradient(ellipse at 50% 68%,rgba(120,12,43,.30),transparent 48%),
-    linear-gradient(180deg,#560b23 0%,#6b0e2b 35%,#590b24 70%,#390817 100%);
+    radial-gradient(
+      ellipse at 50% 18%,
+      rgba(105,22,43,.25),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 50% 68%,
+      rgba(95,15,36,.22),
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #3d0917 0%,
+      #4b0c20 35%,
+      #410a1b 70%,
+      #2b0710 100%
+    );
 }
 
 section {
@@ -81,8 +102,15 @@ section {
   width:145px;
   height:1px;
   margin:22px auto;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
 }
+
+/* GOLD FLORAL CORNERS */
 
 .floral {
   position:absolute;
@@ -93,12 +121,32 @@ section {
   pointer-events:none;
 }
 
-.floral.tl {top:10px;left:10px}
-.floral.tr {top:10px;right:10px;transform:scaleX(-1)}
-.floral.bl {bottom:10px;left:10px;transform:scaleY(-1)}
-.floral.br {bottom:10px;right:10px;transform:scale(-1)}
+.floral.tl {
+  top:10px;
+  left:10px;
+}
 
-/* FIRST PAGE - SAME SPACING */
+.floral.tr {
+  top:10px;
+  right:10px;
+  transform:scaleX(-1);
+}
+
+.floral.bl {
+  bottom:10px;
+  left:10px;
+  transform:scaleY(-1);
+}
+
+.floral.br {
+  bottom:10px;
+  right:10px;
+  transform:scale(-1);
+}
+
+/* =====================================
+   FIRST WEDDING ANNOUNCEMENT
+   ===================================== */
 
 .announcement {
   min-height:100vh;
@@ -116,12 +164,14 @@ section {
   gap:clamp(4px,1.1vh,11px);
 }
 
-/* TEXT FADES IN AFTER COVER OPENS */
+/* TEXT FADES IN WHILE COVER OPENS */
 
 .announcement .content {
   opacity:0;
   transform:translateY(16px);
-  transition:opacity 1.5s ease,transform 1.5s ease;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
 }
 
 body.invitation-revealed .announcement .content {
@@ -180,7 +230,11 @@ body.invitation-revealed .announcement .content {
   margin:4px 0;
 }
 
-.announcement .ornament {margin:7px auto}
+.announcement .ornament {
+  margin:7px auto;
+}
+
+/* SCROLL TO EXPLORE */
 
 .scroll-hint {
   position:absolute;
@@ -202,7 +256,9 @@ body.invitation-revealed .announcement .content {
   transition:opacity 1s ease;
 }
 
-body.invitation-revealed .scroll-hint {opacity:1}
+body.invitation-revealed .scroll-hint {
+  opacity:1;
+}
 
 .scroll-arrow {
   font-size:24px;
@@ -210,11 +266,17 @@ body.invitation-revealed .scroll-hint {opacity:1}
 }
 
 @keyframes bounce {
-  0%,100% {transform:translateY(0)}
-  50% {transform:translateY(7px)}
+  0%,100% {
+    transform:translateY(0);
+  }
+  50% {
+    transform:translateY(7px);
+  }
 }
 
-/* SECOND PAGE */
+/* =====================================
+   SECOND SECTION - WEDDING DATES
+   ===================================== */
 
 .dates-section {
   min-height:auto;
@@ -244,15 +306,21 @@ body.invitation-revealed .scroll-hint {opacity:1}
   line-height:1.4;
 }
 
-/* MEHNDI AND WALIMA */
+/* =====================================
+   MEHNDI AND WALIMA CARDS
+   ===================================== */
 
-.event-section {padding:85px 22px}
+.event-section {
+  padding:85px 22px;
+}
 
 .event-invitation {
   max-width:620px;
   padding:60px 26px;
   border:1px solid rgba(215,180,123,.65);
-  border-radius:45% 45% 30% 30% / 13% 13% 10% 10%;
+  border-radius:
+    45% 45% 30% 30% /
+    13% 13% 10% 10%;
   background:rgba(255,255,255,.025);
   box-shadow:0 0 45px rgba(0,0,0,.07);
 }
@@ -290,7 +358,10 @@ body.invitation-revealed .scroll-hint {opacity:1}
 
 .event-date-row {
   display:grid;
-  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  grid-template-columns:
+    minmax(0,1fr)
+    auto
+    minmax(0,1fr);
   align-items:center;
   gap:10px;
   max-width:520px;
@@ -302,7 +373,7 @@ body.invitation-revealed .scroll-hint {opacity:1}
   font-size:clamp(20px,4.5vw,33px);
 }
 
-/* TINY GOLD DATE SEPARATORS */
+/* SMALL GOLD DATE SEPARATORS */
 
 .event-day {
   position:relative;
@@ -328,13 +399,20 @@ body.invitation-revealed .scroll-hint {opacity:1}
   );
 }
 
-.event-day::before {left:0}
-.event-day::after {right:0}
+.event-day::before {
+  left:0;
+}
+
+.event-day::after {
+  right:0;
+}
 
 .event-time {
   font-size:clamp(21px,4.5vw,30px);
   margin:17px 0;
 }
+
+/* VENUE HEADING */
 
 .location-title {
   font-size:25px;
@@ -369,17 +447,25 @@ body.invitation-revealed .scroll-hint {opacity:1}
   fill:currentColor;
 }
 
-.location-button:hover {text-decoration:underline}
+.location-button:hover {
+  text-decoration:underline;
+}
 
-/* COUNTDOWN */
+/* =====================================
+   COUNTDOWN
+   ===================================== */
 
-.countdown-section {padding:85px 20px}
+.countdown-section {
+  padding:85px 20px;
+}
 
 .countdown-frame {
   max-width:620px;
   padding:55px 25px;
   border:1px solid rgba(215,180,123,.55);
-  border-radius:45% 45% 30% 30% / 15% 15% 12% 12%;
+  border-radius:
+    45% 45% 30% 30% /
+    15% 15% 12% 12%;
   background:rgba(255,255,255,.025);
 }
 
@@ -422,9 +508,13 @@ body.invitation-revealed .scroll-hint {opacity:1}
   font-size:clamp(22px,4vw,32px);
 }
 
-/* FINAL BLESSINGS */
+/* =====================================
+   FINAL BLESSINGS
+   ===================================== */
 
-.blessing-section {padding:90px 22px 120px}
+.blessing-section {
+  padding:90px 22px 120px;
+}
 
 .blessing {
   font-family:"Playfair Display",serif;
@@ -450,9 +540,9 @@ body.invitation-revealed .scroll-hint {opacity:1}
   max-width:520px;
 }
 
-/* ======================================
-   ORIGINAL COVER - IPHONE SCREEN FIT
-   ====================================== */
+/* =====================================
+   ORIGINAL TWO-DOOR COVER
+   ===================================== */
 
 .cover {
   position:fixed;
@@ -469,10 +559,7 @@ body.invitation-revealed .scroll-hint {opacity:1}
   isolation:isolate;
 }
 
-/*
-  Both doors show matching halves of cover.jpg.
-  The image fills the screen without distortion.
-*/
+/* IMAGE SPLIT INTO TWO DOORS */
 
 .cover-door {
   position:absolute;
@@ -499,7 +586,7 @@ body.invitation-revealed .scroll-hint {opacity:1}
   transform-origin:right center;
 }
 
-/* OPEN LEFT AND RIGHT DOORS */
+/* OPEN FROM BOTH SIDES */
 
 .cover.open .cover-door.left {
   transform:rotateY(-110deg);
@@ -509,45 +596,50 @@ body.invitation-revealed .scroll-hint {opacity:1}
   transform:rotateY(110deg);
 }
 
-.cover.open {pointer-events:none}
-.cover.hidden {display:none}
+/* REVEAL ANNOUNCEMENT THROUGH OPENING */
 
-/* TAP TO OPEN */
+.cover.open {
+  background:transparent;
+  pointer-events:none;
+}
+
+.cover.hidden {
+  display:none;
+}
+
+/* =====================================
+   TAP TO OPEN TEXT
+   ===================================== */
 
 .tap-to-open {
   position:absolute;
-  z-index:10;
   bottom:7%;
   left:50%;
   transform:translateX(-50%);
+  z-index:10;
   color:#fff0dc;
   font-family:"Cormorant Garamond",serif;
-  font-size:20px;
+  font-size:18px;
   letter-spacing:3px;
   text-transform:uppercase;
   text-shadow:0 2px 8px #390817;
   white-space:nowrap;
-  animation:tap-glow 2.5s infinite;
-  transition:opacity .35s ease;
+  transition:
+    opacity .15s ease,
+    visibility .15s ease;
   pointer-events:none;
 }
 
-.tap-to-open::after {
-  content:"✦";
-  display:block;
-  text-align:center;
-  font-size:16px;
-  margin-top:7px;
+/* DISAPPEARS AS SOON AS COVER OPENS */
+
+.cover.open .tap-to-open {
+  opacity:0;
+  visibility:hidden;
 }
 
-@keyframes tap-glow {
-  0%,100% {opacity:.6}
-  50% {opacity:1}
-}
-
-.cover.open .tap-to-open {opacity:0}
-
-/* MUSIC BUTTON */
+/* =====================================
+   MUSIC BUTTON
+   ===================================== */
 
 .music-button {
   position:fixed;
@@ -563,9 +655,13 @@ body.invitation-revealed .scroll-hint {opacity:1}
   font-size:23px;
 }
 
-.music-button[hidden] {display:none}
+.music-button[hidden] {
+  display:none;
+}
 
-/* GOLDEN SPARKLES */
+/* =====================================
+   GOLDEN SPARKLES
+   ===================================== */
 
 .sparkles {
   position:fixed;
@@ -576,7 +672,9 @@ body.invitation-revealed .scroll-hint {opacity:1}
   transition:opacity 1s;
 }
 
-body.opened .sparkles {opacity:1}
+body.opened .sparkles {
+  opacity:1;
+}
 
 .sparkle {
   position:absolute;
@@ -591,13 +689,16 @@ body.opened .sparkles {opacity:1}
     opacity:0;
     transform:translateY(15px);
   }
+
   50% {
     opacity:.8;
     transform:translateY(-15px);
   }
 }
 
-/* SLOW FALLING THREE-COLOR PETALS */
+/* =====================================
+   THREE-COLOR SLOW FALLING PETALS
+   ===================================== */
 
 .petals {
   position:fixed;
@@ -609,7 +710,9 @@ body.opened .sparkles {opacity:1}
   transition:opacity 1.2s;
 }
 
-body.opened .petals {opacity:1}
+body.opened .petals {
+  opacity:1;
+}
 
 .petal {
   position:absolute;
@@ -631,22 +734,40 @@ body.opened .petals {opacity:1}
   animation:petal-spin ease-in-out infinite alternate;
 }
 
+/* GOLD PETALS */
+
 .petal.gold .petal-shape {
   background:linear-gradient(
-    135deg,#fff1bc,#e9c77d 35%,#c59648 70%,#f7dda0
+    135deg,
+    #fff1bc,
+    #e9c77d 35%,
+    #c59648 70%,
+    #f7dda0
   );
   box-shadow:0 0 5px rgba(244,200,114,.3);
 }
 
+/* BURGUNDY PETALS */
+
 .petal.burgundy .petal-shape {
   background:linear-gradient(
-    135deg,#bd6075,#8f2e49 40%,#5b1028 80%,#a84963
+    135deg,
+    #bd6075,
+    #8f2e49 40%,
+    #5b1028 80%,
+    #a84963
   );
 }
 
+/* IVORY PETALS */
+
 .petal.ivory .petal-shape {
   background:linear-gradient(
-    135deg,#fffdf1,#fff0d6 40%,#dec9aa 80%,#fff8e9
+    135deg,
+    #fffdf1,
+    #fff0d6 40%,
+    #dec9aa 80%,
+    #fff8e9
   );
 }
 
@@ -655,7 +776,11 @@ body.opened .petals {opacity:1}
     transform:translate3d(0,-40px,0);
     opacity:0;
   }
-  8%,88% {opacity:.45}
+
+  8%,88% {
+    opacity:.45;
+  }
+
   100% {
     transform:translate3d(
       var(--drift),
@@ -667,17 +792,29 @@ body.opened .petals {opacity:1}
 }
 
 @keyframes petal-spin {
-  0% {transform:rotate(-35deg) rotateY(0deg)}
-  50% {transform:rotate(20deg) rotateY(75deg)}
-  100% {transform:rotate(80deg) rotateY(170deg)}
+  0% {
+    transform:rotate(-35deg) rotateY(0deg);
+  }
+
+  50% {
+    transform:rotate(20deg) rotateY(75deg);
+  }
+
+  100% {
+    transform:rotate(80deg) rotateY(170deg);
+  }
 }
 
-/* SCROLL REVEALS */
+/* =====================================
+   SCROLL REVEAL
+   ===================================== */
 
 .reveal {
   opacity:0;
   transform:translateY(20px);
-  transition:opacity .8s ease,transform .8s ease;
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
 }
 
 .reveal.visible {
@@ -685,7 +822,7 @@ body.opened .petals {opacity:1}
   transform:translateY(0);
 }
 
-/* FIRST PAGE FADES IN TOGETHER */
+/* FIRST PAGE FADES AS ONE */
 
 .announcement .reveal {
   opacity:1;
@@ -693,7 +830,9 @@ body.opened .petals {opacity:1}
   transition:none;
 }
 
-/* IPHONE AND MOBILE */
+/* =====================================
+   IPHONE AND MOBILE
+   ===================================== */
 
 @media(max-width:600px) {
   .cover {
@@ -706,7 +845,7 @@ body.opened .petals {opacity:1}
 
   .tap-to-open {
     bottom:8%;
-    font-size:16px;
+    font-size:15px;
     letter-spacing:2px;
   }
 }
@@ -721,24 +860,69 @@ body.opened .petals {opacity:1}
     gap:clamp(3px,.75vh,7px);
   }
 
-  .announcement .bismillah {font-size:20px}
-  .announcement .intro {font-size:12px}
-  .announcement .parents {font-size:16px}
-  .announcement .invite {font-size:14px}
-  .announcement .ceremony {font-size:23px}
-  .announcement .name {font-size:clamp(39px,9vw,54px)}
-  .announcement .with {font-size:31px}
-  .announcement .daughter {font-size:14px}
-  .announcement .ornament {margin:5px auto}
+  .announcement .bismillah {
+    font-size:20px;
+  }
 
-  .event-section {padding:75px 14px}
-  .event-invitation {padding:55px 16px}
-  .event-date-row {gap:4px}
-  .event-day {padding:0 10px}
+  .announcement .intro {
+    font-size:12px;
+  }
 
-  .countdown-section {padding:70px 14px}
-  .countdown-frame {padding:45px 15px}
-  .countdown-grid {gap:6px}
+  .announcement .parents {
+    font-size:16px;
+  }
+
+  .announcement .invite {
+    font-size:14px;
+  }
+
+  .announcement .ceremony {
+    font-size:23px;
+  }
+
+  .announcement .name {
+    font-size:clamp(39px,9vw,54px);
+  }
+
+  .announcement .with {
+    font-size:31px;
+  }
+
+  .announcement .daughter {
+    font-size:14px;
+  }
+
+  .announcement .ornament {
+    margin:5px auto;
+  }
+
+  .event-section {
+    padding:75px 14px;
+  }
+
+  .event-invitation {
+    padding:55px 16px;
+  }
+
+  .event-date-row {
+    gap:4px;
+  }
+
+  .event-day {
+    padding:0 10px;
+  }
+
+  .countdown-section {
+    padding:70px 14px;
+  }
+
+  .countdown-frame {
+    padding:45px 15px;
+  }
+
+  .countdown-grid {
+    gap:6px;
+  }
 }
 
 @media(max-height:700px) {
@@ -751,7 +935,9 @@ body.opened .petals {opacity:1}
     font-size:clamp(35px,7vw,65px);
   }
 
-  .announcement .ornament {margin:3px auto}
+  .announcement .ornament {
+    margin:3px auto;
+  }
 
   .announcement .intro,
   .announcement .invite,
@@ -766,25 +952,30 @@ body.opened .petals {opacity:1}
     transform:none;
   }
 
-  .sparkles,.petals {display:none}
+  .sparkles,
+  .petals {
+    display:none;
+  }
 
   .cover-door {
     transition-duration:.25s;
   }
-
-  .tap-to-open {animation:none}
 }
 </style>
 </head>
 
 <body>
 
+<!-- SPARKLES AND PETALS -->
+
 <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 <div class="petals" id="petals" aria-hidden="true"></div>
 
 <main>
 
-<!-- FIRST WEDDING ANNOUNCEMENT -->
+<!-- =====================================
+     FIRST WEDDING ANNOUNCEMENT
+     ===================================== -->
 
 <section class="announcement" id="welcome">
 
@@ -802,7 +993,9 @@ body.opened .petals {opacity:1}
       and hearts filled with joy
     </p>
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
     <div class="parents reveal">
       Mr. & Mrs. Mehmood Iqbal Sheikh
@@ -824,7 +1017,9 @@ body.opened .petals {opacity:1}
       Muhammad Faizan
     </h1>
 
-    <div class="with script reveal">with</div>
+    <div class="with script reveal">
+      with
+    </div>
 
     <div class="name script reveal">
       Sidra tul-Muntaha
@@ -834,7 +1029,9 @@ body.opened .petals {opacity:1}
       Daughter of Mr. & Mrs. Zubair
     </p>
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
   </div>
 
@@ -845,7 +1042,9 @@ body.opened .petals {opacity:1}
 
 </section>
 
-<!-- SECOND SECTION -->
+<!-- =====================================
+     SECOND SECTION
+     ===================================== -->
 
 <section class="dates-section" id="dates">
 
@@ -868,12 +1067,16 @@ body.opened .petals {opacity:1}
       DECEMBER 2026
     </div>
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
   </div>
 </section>
 
-<!-- MEHNDI -->
+<!-- =====================================
+     MEHNDI
+     ===================================== -->
 
 <section class="event-section" id="mehndi">
 
@@ -890,12 +1093,24 @@ body.opened .petals {opacity:1}
       The Mehndi
     </h2>
 
-    <div class="event-year reveal">2026</div>
+    <div class="event-year reveal">
+      2026
+    </div>
 
     <div class="event-date-row reveal">
-      <span class="event-month">December</span>
-      <span class="event-day">03</span>
-      <span class="event-weekday">Thursday</span>
+
+      <span class="event-month">
+        December
+      </span>
+
+      <span class="event-day">
+        03
+      </span>
+
+      <span class="event-weekday">
+        Thursday
+      </span>
+
     </div>
 
     <div class="event-time reveal">
@@ -904,8 +1119,10 @@ body.opened .petals {opacity:1}
 
     <div class="divider"></div>
 
+    <!-- UPDATED TO VENUE -->
+
     <div class="location-title reveal">
-      Location
+      Venue:
     </div>
 
     <p class="venue reveal">
@@ -931,7 +1148,9 @@ body.opened .petals {opacity:1}
   </div>
 </section>
 
-<!-- WALIMA -->
+<!-- =====================================
+     WALIMA
+     ===================================== -->
 
 <section class="event-section" id="walima">
 
@@ -948,12 +1167,24 @@ body.opened .petals {opacity:1}
       The Walima
     </h2>
 
-    <div class="event-year reveal">2026</div>
+    <div class="event-year reveal">
+      2026
+    </div>
 
     <div class="event-date-row reveal">
-      <span class="event-month">December</span>
-      <span class="event-day">06</span>
-      <span class="event-weekday">Sunday</span>
+
+      <span class="event-month">
+        December
+      </span>
+
+      <span class="event-day">
+        06
+      </span>
+
+      <span class="event-weekday">
+        Sunday
+      </span>
+
     </div>
 
     <div class="event-time reveal">
@@ -962,8 +1193,10 @@ body.opened .petals {opacity:1}
 
     <div class="divider"></div>
 
+    <!-- UPDATED TO VENUE -->
+
     <div class="location-title reveal">
-      Location
+      Venue:
     </div>
 
     <p class="venue reveal">
@@ -987,13 +1220,17 @@ body.opened .petals {opacity:1}
   </div>
 </section>
 
-<!-- COUNTDOWN -->
+<!-- =====================================
+     COUNTDOWN
+     ===================================== -->
 
 <section class="countdown-section">
 
   <div class="content countdown-frame">
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
     <h2 class="countdown-heading reveal">
       Counting Down to Our Mehndi
@@ -1023,12 +1260,16 @@ body.opened .petals {opacity:1}
 
     </div>
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
   </div>
 </section>
 
-<!-- FINAL BLESSINGS -->
+<!-- =====================================
+     FINAL BLESSINGS
+     ===================================== -->
 
 <section class="blessing-section">
 
@@ -1043,7 +1284,9 @@ body.opened .petals {opacity:1}
       a lifetime of togetherness.
     </p>
 
-    <div class="ameen reveal">Ameen</div>
+    <div class="ameen reveal">
+      Ameen
+    </div>
 
     <div class="divider"></div>
 
@@ -1052,7 +1295,9 @@ body.opened .petals {opacity:1}
       this blessed occasion with you.
     </p>
 
-    <div class="ornament">❧ ✦ ❧</div>
+    <div class="ornament">
+      ❧ ✦ ❧
+    </div>
 
     <p class="invite reveal">
       With Love,<br>
@@ -1064,7 +1309,10 @@ body.opened .petals {opacity:1}
 
 </main>
 
-<!-- ORIGINAL TWO-DOOR WEDDING COVER -->
+<!-- =====================================
+     ORIGINAL TWO-DOOR COVER
+     WITH TAP TO OPEN
+     ===================================== -->
 
 <div class="cover"
      id="cover"
@@ -1073,12 +1321,18 @@ body.opened .petals {opacity:1}
      aria-label="Tap anywhere to open wedding invitation">
 
   <div class="cover-door left"></div>
+
   <div class="cover-door right"></div>
 
+  <div class="tap-to-open">
+    Tap to Open
+  </div>
 
 </div>
 
-<!-- WEDDING MUSIC -->
+<!-- =====================================
+     WEDDING MUSIC
+     ===================================== -->
 
 <audio id="music" loop preload="auto">
   <source src="wedding-music.m4a" type="audio/mp4">
@@ -1088,10 +1342,15 @@ body.opened .petals {opacity:1}
 <button class="music-button"
         id="musicButton"
         aria-label="Play wedding music"
-        hidden>♪</button>
+        hidden>
+  ♪
+</button>
 
 <script>
-/* ORIGINAL COVER OPENING AND MUSIC */
+
+/* =====================================
+   COVER OPENING AND MUSIC
+   ===================================== */
 
 const cover=document.getElementById("cover");
 const music=document.getElementById("music");
@@ -1106,60 +1365,104 @@ function updateMusicButton() {
 
   musicButton.setAttribute(
     "aria-label",
-    playing?"Pause wedding music":"Play wedding music"
+    playing
+      ?"Pause wedding music"
+      :"Play wedding music"
   );
 }
 
+/* OPEN INVITATION */
+
 function openInvitation() {
+
   if(cover.classList.contains("open")) return;
 
-  /* Open the original cover from both sides */
+  /*
+    Both doors begin opening.
+    Tap to Open disappears immediately.
+  */
+
   cover.classList.add("open");
 
+  /*
+    Announcement text starts fading in
+    immediately while the doors open.
+  */
+
+  document.body.classList.add("invitation-revealed");
+
+  /* START MUSIC */
+
   musicButton.hidden=false;
+
   music.play().catch(updateMusicButton);
 
-  /* Wait until doors finish opening, then fade in text */
+  /*
+    After doors finish opening,
+    hide cover and allow scrolling.
+  */
+
   setTimeout(()=>{
+
     cover.classList.add("hidden");
 
     document.body.classList.add("opened");
-    document.body.classList.add("invitation-revealed");
 
     window.scrollTo(0,0);
+
     revealVisible();
+
   },2100);
+
 }
 
 /* TAP ANYWHERE ON COVER */
 
 cover.addEventListener("click",openInvitation);
 
+/* KEYBOARD SUPPORT */
+
 cover.addEventListener("keydown",event=>{
+
   if(event.key==="Enter"||event.key===" ") {
+
     event.preventDefault();
+
     openInvitation();
+
   }
+
 });
 
-/* MUSIC BUTTON */
+/* =====================================
+   MUSIC BUTTON
+   ===================================== */
 
 musicButton.addEventListener("click",()=>{
+
   if(music.paused) {
+
     music.play().catch(updateMusicButton);
+
   } else {
+
     music.pause();
+
   }
+
 });
 
 music.addEventListener("play",updateMusicButton);
 music.addEventListener("pause",updateMusicButton);
 
-/* GOLDEN SPARKLES */
+/* =====================================
+   GOLDEN SPARKLES
+   ===================================== */
 
 const sparkleArea=document.getElementById("sparkles");
 
 for(let i=0;i<35;i++) {
+
   const dot=document.createElement("span");
 
   dot.className="sparkle";
@@ -1172,28 +1475,46 @@ for(let i=0;i<35;i++) {
   dot.style.width=size+"px";
   dot.style.height=size+"px";
 
-  dot.style.animationDelay=(-Math.random()*8)+"s";
-  dot.style.animationDuration=(4+Math.random()*5)+"s";
+  dot.style.animationDelay=
+    (-Math.random()*8)+"s";
+
+  dot.style.animationDuration=
+    (4+Math.random()*5)+"s";
 
   sparkleArea.appendChild(dot);
+
 }
 
-/* THREE-COLOR SLOW FALLING PETALS */
+/* =====================================
+   THREE-COLOR SLOW FALLING PETALS
+   ===================================== */
 
 const petalArea=document.getElementById("petals");
-const petalColors=["gold","burgundy","ivory"];
+
+const petalColors=[
+  "gold",
+  "burgundy",
+  "ivory"
+];
 
 for(let i=0;i<15;i++) {
+
   const petal=document.createElement("span");
+
   const petalShape=document.createElement("span");
 
-  petal.className="petal "+petalColors[i%3];
+  petal.className=
+    "petal "+petalColors[i%3];
+
   petalShape.className="petal-shape";
 
-  petal.style.left=Math.random()*100+"%";
+  petal.style.left=
+    Math.random()*100+"%";
 
   const width=8+Math.random()*10;
-  const height=width*(1.2+Math.random()*.4);
+
+  const height=
+    width*(1.2+Math.random()*.4);
 
   petal.style.width=width+"px";
   petal.style.height=height+"px";
@@ -1205,55 +1526,91 @@ for(let i=0;i<15;i++) {
 
   const duration=25+Math.random()*15;
 
-  petal.style.animationDuration=duration+"s";
-  petal.style.animationDelay=(-Math.random()*duration)+"s";
+  petal.style.animationDuration=
+    duration+"s";
 
-  petalShape.style.animationDuration=(3+Math.random()*5)+"s";
+  petal.style.animationDelay=
+    (-Math.random()*duration)+"s";
+
+  petalShape.style.animationDuration=
+    (3+Math.random()*5)+"s";
 
   petal.appendChild(petalShape);
+
   petalArea.appendChild(petal);
+
 }
 
-/* SCROLL REVEAL */
+/* =====================================
+   SCROLL REVEAL
+   ===================================== */
 
-const revealItems=document.querySelectorAll(".reveal");
+const revealItems=
+  document.querySelectorAll(".reveal");
 
 const observer=new IntersectionObserver(entries=>{
+
   entries.forEach(entry=>{
+
     if(entry.isIntersecting) {
+
       entry.target.classList.add("visible");
+
       observer.unobserve(entry.target);
+
     }
+
   });
+
 },{threshold:.05});
 
 revealItems.forEach(item=>observer.observe(item));
 
 function revealVisible() {
+
   revealItems.forEach(item=>{
+
     if(item.getBoundingClientRect().top<innerHeight) {
+
       item.classList.add("visible");
+
     }
+
   });
+
 }
 
-/* LIVE COUNTDOWN - PAKISTAN TIME */
+/* =====================================
+   LIVE COUNTDOWN - PAKISTAN TIME
+   ===================================== */
 
-const eventTime=new Date("2026-12-03T18:00:00+05:00").getTime();
+const eventTime=
+  new Date("2026-12-03T18:00:00+05:00").getTime();
 
 function updateCountdown() {
+
   const remaining=eventTime-Date.now();
 
   if(remaining<=0) {
+
     document.getElementById("countdown").innerHTML=
       '<div class="countdown-finished">The Celebration Has Begun!</div>';
+
     return;
+
   }
 
-  const days=Math.floor(remaining/86400000);
-  const hours=Math.floor((remaining/3600000)%24);
-  const minutes=Math.floor((remaining/60000)%60);
-  const seconds=Math.floor((remaining/1000)%60);
+  const days=
+    Math.floor(remaining/86400000);
+
+  const hours=
+    Math.floor((remaining/3600000)%24);
+
+  const minutes=
+    Math.floor((remaining/60000)%60);
+
+  const seconds=
+    Math.floor((remaining/1000)%60);
 
   document.getElementById("days").textContent=
     String(days).padStart(2,"0");
@@ -1266,12 +1623,14 @@ function updateCountdown() {
 
   document.getElementById("seconds").textContent=
     String(seconds).padStart(2,"0");
+
 }
 
 updateCountdown();
+
 setInterval(updateCountdown,1000);
+
 </script>
 
 </body>
 </html>
-

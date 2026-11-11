@@ -3,22 +3,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4d1025">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#571426">
 
-<title>Faizan & Sidra | Wedding Invitation</title>
+<title>Muhammad Faizan & Sidra tul-Muntaha | Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --wine:#77283b;
-  --darkwine:#4d1025;
-  --cream:#f7e7d6;
-  --champagne:#ead2bc;
-  --gold:#c9a266;
-  --palegold:#ffebbd;
-  --green:#183b30;
+  --deep:#400d1e;
+  --red:#651b2b;
+  --rose:#85374a;
+  --gold:#d8b57c;
+  --ivory:#fff0dc;
 }
 
 * {
@@ -32,8 +30,8 @@ html {
 body {
   margin:0;
   overflow:hidden;
-  background:var(--darkwine);
-  color:var(--wine);
+  background:var(--deep);
+  color:var(--ivory);
   font-family:"Cormorant Garamond",serif;
 }
 
@@ -42,57 +40,471 @@ body.opened {
   overflow-y:auto;
 }
 
-button,a {
-  -webkit-tap-highlight-color:transparent;
-}
-
 button {
   cursor:pointer;
 }
 
+main {
+  position:relative;
+  background:
+    radial-gradient(
+      ellipse at 50% 12%,
+      rgba(155,70,88,.55),
+      transparent 33%
+    ),
+    radial-gradient(
+      ellipse at 50% 62%,
+      rgba(139,48,72,.48),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #55172a 0%,
+      #6d2539 32%,
+      #571729 65%,
+      #400d1e 100%
+    );
+}
+
 section {
   position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 22px;
   overflow:hidden;
 }
 
-main {
+/* NO BORDERS BETWEEN SECTIONS */
+
+.content {
+  position:relative;
+  z-index:2;
   width:100%;
+  max-width:650px;
+  margin:auto;
 }
 
-/* TWO-DOOR OPENING */
+.script {
+  font-family:"Great Vibes",cursive;
+  font-weight:400;
+}
+
+.ornament {
+  color:var(--gold);
+  font-size:21px;
+  letter-spacing:5px;
+  margin:15px auto;
+}
+
+.divider {
+  width:145px;
+  height:1px;
+  margin:22px auto;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+/* FLORAL CORNER DECORATIONS */
+
+.floral {
+  position:absolute;
+  z-index:1;
+  font-size:clamp(40px,8vw,80px);
+  color:var(--gold);
+  opacity:.45;
+  pointer-events:none;
+}
+
+.floral.tl {
+  top:10px;
+  left:10px;
+}
+
+.floral.tr {
+  top:10px;
+  right:10px;
+  transform:scaleX(-1);
+}
+
+.floral.bl {
+  bottom:10px;
+  left:10px;
+  transform:scaleY(-1);
+}
+
+.floral.br {
+  bottom:10px;
+  right:10px;
+  transform:scale(-1);
+}
+
+/* FIRST WEDDING ANNOUNCEMENT */
+
+.announcement {
+  min-height:100vh;
+  min-height:100svh;
+  padding:34px 18px 85px;
+}
+
+.announcement .content {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.bismillah {
+  font-size:clamp(18px,4vw,28px);
+  line-height:1.5;
+  margin:0 0 8px;
+}
+
+.intro {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(12px,2.5vw,16px);
+  font-style:italic;
+  line-height:1.45;
+  margin:5px 0;
+}
+
+.parents {
+  font-size:clamp(15px,3vw,21px);
+  font-weight:600;
+  letter-spacing:.4px;
+  margin:8px 0;
+}
+
+.invite {
+  font-size:clamp(14px,3vw,19px);
+  font-style:italic;
+  line-height:1.35;
+  margin:6px 0;
+}
+
+.ceremony {
+  font-size:clamp(20px,4vw,29px);
+  margin:7px 0;
+}
+
+.name {
+  font-size:clamp(41px,9vw,72px);
+  line-height:1.12;
+  color:#ffe0b5;
+  margin:7px 0;
+}
+
+.with {
+  font-size:clamp(29px,6vw,43px);
+  margin:0;
+  line-height:1;
+}
+
+.daughter {
+  font-size:clamp(14px,3vw,19px);
+  margin:7px 0;
+}
+
+/* SCROLL TO EXPLORE */
+
+.scroll-hint {
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  color:#f4d6a6;
+  font-size:12px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.scroll-arrow {
+  font-size:24px;
+  animation:bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%,100% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(7px);
+  }
+}
+
+/* SECOND SECTION - SHORTER */
+
+.dates-section {
+  min-height:auto;
+  padding:60px 24px 65px;
+}
+
+.journey {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(17px,3.5vw,25px);
+  font-style:italic;
+  line-height:1.6;
+  max-width:530px;
+  margin:auto;
+}
+
+.inshallah {
+  font-size:clamp(54px,10vw,78px);
+  color:#ffe0b5;
+  margin:12px 0;
+}
+
+.date-range {
+  font-size:clamp(25px,5vw,35px);
+  line-height:1.4;
+}
+
+/* MEHNDI & WALIMA */
+
+.event-section {
+  padding:85px 22px;
+}
+
+/* OVAL FRAME ONLY AROUND EVENT INVITATIONS */
+
+.event-invitation {
+  max-width:620px;
+  padding:60px 26px;
+  border:1px solid rgba(215,180,123,.65);
+  border-radius:
+    45% 45% 30% 30% /
+    13% 13% 10% 10%;
+  background:rgba(255,255,255,.025);
+  box-shadow:0 0 45px rgba(0,0,0,.07);
+}
+
+.event-invitation::before {
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(215,180,123,.22);
+  border-radius:inherit;
+  pointer-events:none;
+}
+
+.join-us {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(16px,3vw,22px);
+  font-style:italic;
+  letter-spacing:1px;
+  margin:0 0 8px;
+}
+
+.event-heading {
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(60px,12vw,95px);
+  font-weight:400;
+  line-height:1.15;
+  color:#ffe0b5;
+  margin:0 0 25px;
+}
+
+.event-year {
+  font-size:21px;
+  letter-spacing:3px;
+}
+
+.event-date-row {
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:8px;
+  max-width:520px;
+  margin:4px auto;
+}
+
+.event-month,
+.event-weekday {
+  font-size:clamp(20px,4.5vw,33px);
+}
+
+.event-day {
+  font-size:clamp(65px,13vw,100px);
+  line-height:1;
+  color:#ffe0b5;
+}
+
+.event-time {
+  font-size:clamp(21px,4.5vw,30px);
+  margin:17px 0;
+}
+
+.location-title {
+  font-size:25px;
+  margin:10px 0;
+}
+
+.venue {
+  font-size:clamp(18px,3.5vw,24px);
+  line-height:1.4;
+  margin:0 auto 16px;
+}
+
+/* SMALL LOCATION LINK */
+
+.location-button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  padding:4px 8px;
+  border:none;
+  border-radius:0;
+  background:transparent;
+  color:#f6d4a3;
+  font-family:"Cormorant Garamond",serif;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-decoration:none;
+}
+
+.location-button svg {
+  width:12px;
+  height:12px;
+  fill:currentColor;
+}
+
+.location-button:hover {
+  text-decoration:underline;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+  padding:85px 20px;
+}
+
+.countdown-frame {
+  max-width:620px;
+  padding:55px 25px;
+  border:1px solid rgba(215,180,123,.55);
+  border-radius:
+    45% 45% 30% 30% /
+    15% 15% 12% 12%;
+  background:rgba(255,255,255,.025);
+}
+
+.countdown-heading {
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(30px,6vw,48px);
+  font-weight:500;
+  line-height:1.2;
+  color:#ffe0b5;
+  margin:0 0 30px;
+}
+
+.countdown-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+
+.count-box {
+  width:auto;
+  min-width:0;
+  padding:17px 4px;
+  border:1px solid rgba(215,180,123,.65);
+  border-radius:5px;
+  background:rgba(255,255,255,.035);
+}
+
+.count-number {
+  display:block;
+  font-size:clamp(26px,6vw,52px);
+}
+
+.count-label {
+  display:block;
+  font-size:clamp(9px,2vw,12px);
+  letter-spacing:.5px;
+}
+
+.countdown-finished {
+  font-size:clamp(22px,4vw,32px);
+}
+
+/* CLOSING BLESSINGS */
+
+.blessing-section {
+  padding:90px 22px 120px;
+}
+
+.blessing {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(19px,3.8vw,28px);
+  font-style:italic;
+  line-height:1.7;
+}
+
+.ameen {
+  font-family:"Parisienne",cursive;
+  font-size:clamp(36px,7vw,49px);
+  color:#ffe0b5;
+  margin:15px 0;
+}
+
+.closing {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(19px,4vw,29px);
+  font-style:italic;
+  font-weight:400;
+  line-height:1.6;
+  margin:22px auto;
+  max-width:520px;
+}
+
+/* TWO-DOOR OPENING COVER */
 
 .cover {
   position:fixed;
   inset:0;
   z-index:1000;
-  background:var(--darkwine);
-  perspective:1600px;
-  overflow:hidden;
+  background:var(--deep);
+  perspective:1500px;
   cursor:pointer;
 }
 
-.cover-half {
+.door {
   position:absolute;
   top:0;
-  width:50%;
   height:100%;
+  width:50%;
   background-image:url("cover.jpg");
   background-size:200% 100%;
   background-repeat:no-repeat;
   backface-visibility:hidden;
-  transition:transform 2s cubic-bezier(.65,0,.25,1);
+  transition:transform 2s ease-in-out;
 }
 
-.cover-left {
+.door.left {
   left:0;
   background-position:left center;
-  transform-origin:left center;
+  transform-origin:left;
 }
 
-.cover-right {
+.door.right {
   right:0;
   background-position:right center;
-  transform-origin:right center;
+  transform-origin:right;
 }
 
 .cover.open {
@@ -100,15 +512,36 @@ main {
   pointer-events:none;
 }
 
-.cover.open .cover-left {
+.cover.open .left {
   transform:rotateY(-110deg);
 }
 
-.cover.open .cover-right {
+.cover.open .right {
   transform:rotateY(110deg);
 }
 
 .cover.hidden {
+  display:none;
+}
+
+/* MUSIC BUTTON */
+
+.music-button {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:900;
+  width:47px;
+  height:47px;
+  border-radius:50%;
+  border:1px solid var(--gold);
+  background:var(--deep);
+  color:#ffe0b5;
+  font-size:23px;
+  cursor:pointer;
+}
+
+.music-button[hidden] {
   display:none;
 }
 
@@ -117,11 +550,10 @@ main {
 .sparkles {
   position:fixed;
   inset:0;
-  overflow:hidden;
-  pointer-events:none;
   z-index:50;
+  pointer-events:none;
   opacity:0;
-  transition:opacity 1.5s;
+  transition:opacity 1s;
 }
 
 body.opened .sparkles {
@@ -130,819 +562,32 @@ body.opened .sparkles {
 
 .sparkle {
   position:absolute;
-  width:3px;
-  height:3px;
   border-radius:50%;
-  background:#ffe6a4;
-  box-shadow:
-    0 0 8px #f7d38c,
-    0 0 18px rgba(255,220,150,.5);
-  animation:twinkle linear infinite;
+  background:#ffe2a1;
+  box-shadow:0 0 8px #f4c879;
+  animation:twinkle 5s infinite;
 }
 
 @keyframes twinkle {
   0%,100% {
     opacity:0;
-    transform:translateY(25px) scale(.3);
+    transform:translateY(15px);
   }
+
   50% {
-    opacity:.85;
-    transform:translateY(-20px) scale(1.3);
+    opacity:.8;
+    transform:translateY(-15px);
   }
 }
 
-/* SHARED CHAMPAGNE BACKGROUND */
-
-.paper {
-  background:
-    radial-gradient(
-      ellipse at center,
-      #f8e6d5 0%,
-      #eed8c5 65%,
-      #dfc3b0 100%
-    );
-}
-
-.paper::after {
-  content:"";
-  position:absolute;
-  inset:13px;
-  border:1px solid rgba(139,67,63,.3);
-  pointer-events:none;
-}
-
-.paper-content {
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:650px;
-  margin:auto;
-  padding:100px 28px;
-  text-align:center;
-}
-
-/* FLORAL CORNERS */
-
-.floral {
-  position:absolute;
-  z-index:1;
-  width:185px;
-  height:230px;
-  pointer-events:none;
-  opacity:.95;
-}
-
-.floral::before {
-  content:"";
-  position:absolute;
-  left:45px;
-  top:15px;
-  height:215px;
-  width:3px;
-  background:linear-gradient(
-    #8b563d,
-    #bd9462,
-    transparent
-  );
-  transform:rotate(-27deg);
-  border-radius:50%;
-}
-
-.floral::after {
-  content:"🌹";
-  position:absolute;
-  top:7px;
-  left:6px;
-  font-size:58px;
-  filter:sepia(.3) saturate(.75);
-}
-
-.floral .branch {
-  position:absolute;
-  top:65px;
-  left:43px;
-  font-size:36px;
-  color:#886048;
-  transform:rotate(-20deg);
-  text-shadow:22px 43px #a37a54;
-}
-
-.floral .buds {
-  position:absolute;
-  top:103px;
-  left:6px;
-  font-size:19px;
-  letter-spacing:6px;
-  color:#9f4759;
-  transform:rotate(-37deg);
-}
-
-.floral.tl {
-  top:0;
-  left:0;
-}
-
-.floral.tr {
-  top:0;
-  right:0;
-  transform:scaleX(-1);
-}
-
-.floral.bl {
-  bottom:0;
-  left:0;
-  transform:scaleY(-1);
-}
-
-.floral.br {
-  bottom:0;
-  right:0;
-  transform:scale(-1);
-}
-
-/* PEARL DECORATION */
-
-.pearl-trail {
-  position:absolute;
-  left:-5%;
-  right:-5%;
-  bottom:0;
-  height:100px;
-  border-top:3px solid rgba(195,155,115,.55);
-  border-radius:50% 50% 0 0;
-  transform:rotate(-4deg);
-  opacity:.8;
-}
-
-.pearl-trail::after {
-  content:"✧  ◦  ✧  ◦  ✧  ◦  ✧  ◦  ✧";
-  position:absolute;
-  left:0;
-  right:0;
-  top:-15px;
-  text-align:center;
-  color:#c29b78;
-  font-size:23px;
-  letter-spacing:7px;
-}
-
-.ornament {
-  color:var(--gold);
-  font-size:27px;
-  letter-spacing:9px;
-  margin:22px auto;
-}
-
-.divider {
-  width:170px;
-  height:1px;
-  margin:30px auto;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #aa7650,
-    transparent
-  );
-}
-
-.script {
-  font-family:"Great Vibes",cursive;
-  font-weight:400;
-}
-
-/* SECTION 1: WEDDING ANNOUNCEMENT */
-
-.introduction {
-  min-height:100vh;
-  min-height:100dvh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.introduction .paper-content {
-  padding-top:110px;
-  padding-bottom:115px;
-}
-
-.bismillah {
-  font-size:clamp(27px,5.5vw,39px);
-  color:var(--wine);
-  line-height:1.8;
-  margin-bottom:30px;
-}
-
-.intro-small {
-  font-size:clamp(19px,4.5vw,27px);
-  font-style:italic;
-  line-height:1.5;
-  margin:15px 0;
-}
-
-.parents {
-  font-size:clamp(25px,5.5vw,38px);
-  font-weight:600;
-  letter-spacing:.5px;
-  margin:28px 0;
-}
-
-.invitation-text {
-  font-size:clamp(23px,5vw,32px);
-  font-style:italic;
-  line-height:1.4;
-  margin:20px auto;
-  max-width:520px;
-}
-
-.ceremony-title {
-  font-size:clamp(27px,6vw,41px);
-  font-weight:600;
-  margin:16px 0;
-}
-
-.couple-name {
-  font-size:clamp(61px,12vw,95px);
-  line-height:1.3;
-  color:#8b3442;
-  margin:18px 0;
-  text-shadow:0 2px 10px rgba(128,48,62,.1);
-}
-
-.with {
-  font-size:clamp(38px,8vw,55px);
-  margin:5px 0;
-}
-
-.daughter {
-  font-size:clamp(19px,4vw,25px);
-  line-height:1.5;
-}
-
-/* SECTION 2: IN SHA ALLAH */
-
-.dates-section {
-  min-height:85vh;
-  min-height:85dvh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-top:1px solid rgba(139,67,63,.2);
-}
-
-.journey-message {
-  font-family:"Playfair Display",serif;
-  font-size:clamp(23px,4.5vw,33px);
-  line-height:1.65;
-  font-style:italic;
-  max-width:550px;
-  margin:0 auto 55px;
-}
-
-.inshallah {
-  font-size:clamp(60px,12vw,88px);
-  margin:10px 0 18px;
-  color:#8e3c49;
-}
-
-.date-range {
-  font-size:clamp(26px,5.5vw,39px);
-  letter-spacing:1px;
-  line-height:1.5;
-}
-
-.date-caption {
-  margin-top:23px;
-  font-size:22px;
-  font-style:italic;
-}
-
-/* SHARED EVENT SCENE */
-
-.event-scene {
-  min-height:100vh;
-  min-height:100dvh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:95px 15px 110px;
-  isolation:isolate;
-}
-
-.mehndi-scene {
-  background:
-    radial-gradient(
-      ellipse at center,
-      #365c43,
-      #173a2e 75%,
-      #0b241d
-    );
-}
-
-.walima-scene {
-  background:
-    radial-gradient(
-      ellipse at center,
-      #d7b47a,
-      #ac8053 65%,
-      #67412c
-    );
-}
-
-/* DECORATIVE PALACE ARCH */
-
-.palace-arch {
-  position:absolute;
-  z-index:-1;
-  top:70px;
-  left:50%;
-  transform:translateX(-50%);
-  width:min(96%,850px);
-  height:75%;
-  border:13px solid rgba(236,201,133,.65);
-  border-radius:48% 48% 8% 8% / 28% 28% 5% 5%;
-  box-shadow:
-    0 0 0 5px rgba(87,53,26,.35),
-    inset 0 0 0 4px rgba(255,232,170,.45),
-    0 0 50px rgba(255,216,149,.16);
-}
-
-.palace-arch::before {
-  content:"";
-  position:absolute;
-  inset:17px;
-  border:2px solid rgba(255,223,160,.5);
-  border-radius:inherit;
-}
-
-/* MARIGOLD FLOWERS AND WHITE ROSES */
-
-.garland {
-  position:absolute;
-  top:0;
-  width:100%;
-  height:80px;
-  display:flex;
-  justify-content:center;
-  gap:3px;
-  overflow:hidden;
-  opacity:.95;
-}
-
-.garland span {
-  font-size:clamp(20px,4vw,32px);
-  animation:garlandSway 5s ease-in-out infinite;
-}
-
-@keyframes garlandSway {
-  0%,100% {transform:rotate(-5deg)}
-  50% {transform:rotate(5deg)}
-}
-
-.mehndi-scene .garland {
-  background:linear-gradient(
-    #123428 0%,
-    #32503a 45%,
-    transparent
-  );
-}
-
-.walima-scene .garland {
-  background:linear-gradient(
-    #76522d 0%,
-    #a67b4b 45%,
-    transparent
-  );
-}
-
-/* HANGING LANTERNS */
-
-.lanterns {
-  position:absolute;
-  top:45px;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:space-evenly;
-  pointer-events:none;
-}
-
-.lantern {
-  width:24px;
-  height:49px;
-  margin-top:45px;
-  position:relative;
-  border:2px solid #e9c27f;
-  border-radius:45% 45% 35% 35%;
-  background:radial-gradient(
-    #fff3c5,
-    #e8bd65 50%,
-    #a67436
-  );
-  box-shadow:
-    0 0 20px #ffd881,
-    0 0 40px rgba(255,218,129,.35);
-  animation:lanternSway 5s ease-in-out infinite;
-}
-
-.lantern:nth-child(2) {
-  margin-top:10px;
-  animation-delay:-2s;
-}
-
-.lantern:nth-child(3) {
-  margin-top:70px;
-  animation-delay:-1s;
-}
-
-.lantern::before {
-  content:"";
-  position:absolute;
-  width:1px;
-  height:75px;
-  background:#e5c38c;
-  left:50%;
-  bottom:100%;
-}
-
-@keyframes lanternSway {
-  0%,100% {transform:rotate(-4deg)}
-  50% {transform:rotate(4deg)}
-}
-
-/* ORNATE EVENT SIGN */
-
-.event-sign {
-  position:relative;
-  z-index:3;
-  width:min(100%,670px);
-  padding:65px 25px 58px;
-  border:4px solid #e8c98c;
-  border-radius:43% 43% 32% 32% / 21% 21% 16% 16%;
-  text-align:center;
-  box-shadow:
-    0 0 0 7px rgba(86,48,20,.25),
-    0 18px 50px rgba(0,0,0,.3),
-    inset 0 0 0 5px rgba(255,231,165,.15);
-}
-
-.event-sign::before {
-  content:"";
-  position:absolute;
-  inset:12px;
-  border:1px solid rgba(255,230,175,.6);
-  border-radius:inherit;
-  pointer-events:none;
-}
-
-.mehndi-sign {
-  color:#f8e9c5;
-  background:
-    radial-gradient(
-      ellipse at center,
-      #295747,
-      #12372d
-    );
-}
-
-.walima-sign {
-  color:#fff4d8;
-  background:
-    radial-gradient(
-      ellipse at center,
-      #d0a65e,
-      #a67b43
-    );
-}
-
-.event-flourish {
-  color:#f6ddac;
-  font-size:28px;
-  letter-spacing:9px;
-  margin-bottom:7px;
-}
-
-.sign-title {
-  font-family:"Playfair Display",serif;
-  font-size:clamp(31px,6vw,47px);
-  font-weight:400;
-  margin:10px 0 20px;
-}
-
-.sign-year {
-  font-size:21px;
-  letter-spacing:2px;
-}
-
-.sign-date {
-  display:grid;
-  grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  gap:12px;
-  margin:12px auto 16px;
-  max-width:530px;
-}
-
-.sign-month,
-.sign-weekday {
-  font-size:clamp(22px,5vw,36px);
-}
-
-.sign-day {
-  font-size:clamp(53px,11vw,83px);
-  line-height:1;
-}
-
-.sign-time {
-  font-size:clamp(21px,4vw,29px);
-  margin:10px 0 23px;
-}
-
-.sign-rule {
-  height:1px;
-  width:60%;
-  margin:24px auto;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #ffe5a9,
-    transparent
-  );
-}
-
-.location-heading {
-  font-family:"Playfair Display",serif;
-  font-size:23px;
-  margin:5px 0 12px;
-}
-
-.location-name {
-  font-size:clamp(21px,4vw,28px);
-  line-height:1.4;
-  margin:0 0 17px;
-}
-
-.map-link {
-  display:inline-block;
-  border:1px solid rgba(255,240,195,.8);
-  border-radius:30px;
-  padding:11px 22px;
-  color:#fff4d5;
-  background:rgba(40,20,10,.13);
-  font-family:"Cormorant Garamond",serif;
-  font-size:20px;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.map-link:hover {
-  background:#f5e0b3;
-  color:#49301b;
-}
-
-.map-coming {
-  font-size:20px;
-  font-style:italic;
-  opacity:.85;
-}
-
-/* FLORAL STAGE UNDER EVENT SIGN */
-
-.stage-flowers {
-  position:absolute;
-  bottom:52px;
-  left:0;
-  right:0;
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  pointer-events:none;
-}
-
-.stage-flowers span {
-  font-size:clamp(35px,10vw,75px);
-  filter:drop-shadow(0 8px 12px rgba(0,0,0,.3));
-}
-
-/* DECORATIVE VINTAGE CAR */
-
-.vintage-car {
-  position:relative;
-  width:min(62vw,330px);
-  height:110px;
-  margin:65px auto 0;
-  z-index:2;
-  filter:drop-shadow(0 15px 12px rgba(0,0,0,.25));
-}
-
-.car-body {
-  position:absolute;
-  bottom:12px;
-  left:5%;
-  width:90%;
-  height:62px;
-  border:3px solid #e8e0c9;
-  border-radius:40% 40% 18% 18%;
-  background:linear-gradient(
-    #f6f0dc,
-    #b2c3a7 60%,
-    #758c79
-  );
-}
-
-.car-top {
-  position:absolute;
-  bottom:61px;
-  left:25%;
-  width:50%;
-  height:40px;
-  border:4px solid #e9e4d4;
-  border-bottom:0;
-  border-radius:55% 55% 0 0;
-  background:linear-gradient(
-    #516c64,
-    #a6bbae
-  );
-}
-
-.car-wheel {
-  position:absolute;
-  bottom:1px;
-  width:47px;
-  height:47px;
-  border-radius:50%;
-  border:8px solid #333431;
-  background:#ddd8c6;
-  box-shadow:inset 0 0 0 4px #8d9892;
-}
-
-.car-wheel.left {left:13%}
-.car-wheel.right {right:13%}
-
-.car-flowers {
-  position:absolute;
-  bottom:33px;
-  width:100%;
-  text-align:center;
-  font-size:clamp(20px,4vw,31px);
-  letter-spacing:-2px;
-}
-
-.scene-caption {
-  position:relative;
-  z-index:2;
-  color:#f4dfba;
-  font-size:16px;
-  letter-spacing:2px;
-  margin-top:25px;
-}
-
-/* COUNTDOWN */
-
-.countdown-section {
-  min-height:75vh;
-  min-height:75dvh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:100px 20px;
-  background:
-    radial-gradient(
-      ellipse at center,
-      #8e3046,
-      #4b1025 85%
-    );
-  color:#fff1d5;
-}
-
-.countdown-section h2 {
-  font-size:clamp(36px,7vw,61px);
-  font-weight:400;
-  margin:20px 0 45px;
-}
-
-.countdown-grid {
-  display:flex;
-  justify-content:center;
-  gap:12px;
-}
-
-.count-box {
-  width:min(27vw,135px);
-  padding:25px 8px;
-  border:1px solid #e1c28c;
-  background:rgba(255,255,255,.05);
-  box-shadow:0 0 20px rgba(226,184,112,.1);
-}
-
-.count-number {
-  display:block;
-  font-size:clamp(39px,8vw,68px);
-  line-height:1;
-  color:#ffe3ab;
-}
-
-.count-label {
-  display:block;
-  margin-top:14px;
-  font-size:14px;
-  letter-spacing:1px;
-}
-
-.countdown-done {
-  font-size:32px;
-  color:#ffe3ab;
-}
-
-/* BLESSINGS AND CLOSING */
-
-.blessings {
-  min-height:95vh;
-  min-height:95dvh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.blessing-message {
-  font-family:"Playfair Display",serif;
-  font-style:italic;
-  font-size:clamp(23px,4.6vw,34px);
-  line-height:1.7;
-  max-width:560px;
-  margin:auto;
-}
-
-.ameen {
-  font-size:clamp(27px,5vw,37px);
-  letter-spacing:3px;
-  margin-top:30px;
-}
-
-.closing-script {
-  font-family:"Great Vibes",cursive;
-  font-size:clamp(44px,9vw,72px);
-  line-height:1.3;
-  margin-top:40px;
-}
-
-.closing-bottom {
-  font-size:26px;
-  font-style:italic;
-  line-height:1.4;
-  margin-top:12px;
-}
-
-/* MUSIC BUTTON */
-
-.music-button {
-  position:fixed;
-  bottom:23px;
-  right:20px;
-  z-index:900;
-  width:49px;
-  height:49px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1.5px solid #e4c17e;
-  border-radius:50%;
-  background:linear-gradient(
-    145deg,
-    #8d304b,
-    #44091d
-  );
-  color:#ffe6b0;
-  font-size:24px;
-  box-shadow:0 0 16px rgba(217,182,111,.4);
-}
-
-.music-button[hidden] {
-  display:none;
-}
-
-.music-button.playing {
-  animation:musicGlow 2.5s infinite;
-}
-
-@keyframes musicGlow {
-  0%,100% {
-    box-shadow:0 0 9px rgba(217,182,111,.3);
-  }
-  50% {
-    box-shadow:0 0 26px rgba(217,182,111,.8);
-  }
-}
-
-/* SCROLL REVEALS */
+/* SCROLL REVEAL */
 
 .reveal {
   opacity:0;
-  transform:translateY(35px);
+  transform:translateY(20px);
   transition:
-    opacity 1s ease,
-    transform 1s ease;
+    opacity .8s ease,
+    transform .8s ease;
 }
 
 .reveal.visible {
@@ -953,79 +598,71 @@ body.opened .sparkles {
 /* MOBILE */
 
 @media(max-width:480px) {
-  .paper-content {
-    padding-left:27px;
-    padding-right:27px;
+  .announcement {
+    padding:25px 16px 78px;
   }
 
-  .introduction .paper-content {
-    padding-top:110px;
-    padding-bottom:100px;
+  .announcement .ornament {
+    margin:7px auto;
   }
 
-  .floral {
-    width:115px;
-    height:150px;
-    transform-origin:top left;
-    opacity:.75;
+  .announcement .name {
+    font-size:clamp(38px,9vw,54px);
   }
 
-  .floral::after {
-    font-size:42px;
+  .announcement .parents {
+    font-size:15px;
   }
 
-  .floral .branch {
-    font-size:25px;
+  .event-section {
+    padding:75px 14px;
   }
 
-  .event-scene {
-    padding:115px 14px 70px;
+  .event-invitation {
+    padding:55px 16px;
   }
 
-  .event-sign {
-    padding:53px 15px 43px;
-    border-width:3px;
+  .event-date-row {
+    gap:4px;
   }
 
-  .sign-date {
-    gap:7px;
+  .countdown-section {
+    padding:70px 14px;
   }
 
-  .lanterns {
-    top:50px;
+  .countdown-frame {
+    padding:45px 15px;
   }
 
-  .lantern {
-    transform:scale(.8);
+  .countdown-grid {
+    gap:6px;
+  }
+}
+
+@media(max-height:700px) {
+  .announcement .name {
+    font-size:39px;
   }
 
-  .vintage-car {
-    margin-top:58px;
+  .announcement .ornament {
+    margin:4px auto;
   }
 
-  .journey-message {
-    font-size:23px;
-  }
-
-  .blessing-message {
-    font-size:23px;
+  .announcement .intro,
+  .announcement .invite,
+  .announcement .daughter {
+    font-size:12px;
   }
 }
 
 @media(prefers-reduced-motion:reduce) {
-  .sparkles {
-    display:none;
-  }
-
   .reveal {
     opacity:1;
     transform:none;
   }
 
-  .garland span,
-  .lantern,
-  .music-button {
-    animation:none;
+  .sparkles {
+    display:none;
   }
 }
 </style>
@@ -1033,143 +670,281 @@ body.opened .sparkles {
 
 <body>
 
-<!-- SPARKLES -->
+<!-- GOLDEN SPARKLES -->
 
-<div class="sparkles" id="sparkles"
-     aria-hidden="true"></div>
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
 
 <main>
 
-<!-- SECTION 1: WEDDING ANNOUNCEMENT -->
+<!-- 1. WEDDING ANNOUNCEMENT - NO BOX -->
 
-<section class="paper introduction" id="introduction">
+<section class="announcement" id="welcome">
 
-  <div class="floral tl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
+  <span class="floral tl">❦</span>
+  <span class="floral tr">❦</span>
 
-  <div class="floral tr">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
+  <div class="content">
 
-  <div class="floral bl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral br">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="paper-content">
-
-    <div class="bismillah reveal"
-         lang="ar" dir="rtl">
+    <div class="bismillah reveal" lang="ar" dir="rtl">
       بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
     </div>
 
-    <p class="intro-small reveal">
-      With gratitude to Allah Almighty
+    <p class="intro reveal">
+      With gratitude to Allah Almighty<br>
       and hearts filled with joy
     </p>
 
     <div class="ornament">❧ ✦ ❧</div>
 
     <div class="parents reveal">
-      MR. & MRS.<br>
-      MEHMOOD IQBAL SHEIKH
+      Mr. & Mrs. Mehmood Iqbal Sheikh
     </div>
 
-    <p class="invitation-text reveal">
-      Would be delighted to have
-      your gracious presence at the
+    <p class="invite reveal">
+      Would be delighted to have your gracious presence at the
     </p>
 
-    <div class="ceremony-title reveal">
+    <div class="ceremony reveal">
       Wedding Ceremony
     </div>
 
-    <p class="invitation-text reveal">
+    <p class="invite reveal">
       of their beloved son
     </p>
 
-    <div class="couple-name script reveal">
+    <h1 class="name script reveal">
       Muhammad Faizan
-    </div>
+    </h1>
 
     <div class="with script reveal">
       with
     </div>
 
-    <div class="couple-name script reveal">
+    <div class="name script reveal">
       Sidra tul-Muntaha
     </div>
 
     <p class="daughter reveal">
-      Daughter of<br>
-      Mr. & Mrs. Zubair
+      Daughter of Mr. & Mrs. Zubair
     </p>
 
     <div class="ornament">❧ ✦ ❧</div>
 
   </div>
 
-  <div class="pearl-trail"></div>
+  <a class="scroll-hint" href="#dates">
+    Scroll to Explore
+    <span class="scroll-arrow">⌄</span>
+  </a>
 
 </section>
 
-<!-- SECTION 2: IN SHA ALLAH -->
+<!-- 2. IN SHA ALLAH - SHORT SECTION -->
 
-<section class="paper dates-section">
+<section class="dates-section" id="dates">
 
-  <div class="floral tl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
+  <div class="content">
 
-  <div class="floral tr">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral bl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral br">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="paper-content">
-
-    <p class="journey-message reveal">
-      As they begin their beautiful
-      journey of togetherness,
-      your presence and heartfelt
-      duas will make this blessed
-      occasion even more meaningful.
+    <p class="journey reveal">
+      As they begin their beautiful journey of togetherness,
+      your presence and heartfelt duas will make this
+      blessed occasion even more meaningful.
     </p>
 
     <div class="divider"></div>
 
-    <div class="inshallah script reveal">
+    <h2 class="inshallah script reveal">
       In Sha Allah
-    </div>
+    </h2>
 
     <div class="date-range reveal">
       3rd – 6th<br>
       DECEMBER 2026
     </div>
 
-    <p class="date-caption reveal">
-      Join us in celebrating
-      this beautiful beginning.
+    <div class="ornament">❧ ✦ ❧</div>
+
+  </div>
+
+</section>
+
+<!-- 3. MEHNDI - OVAL INVITATION -->
+
+<section class="event-section" id="mehndi">
+
+  <span class="floral tl">❦</span>
+  <span class="floral br">❦</span>
+
+  <div class="content event-invitation">
+
+    <p class="join-us reveal">
+      Join Us to Celebrate
     </p>
+
+    <h2 class="event-heading reveal">
+      The Mehndi
+    </h2>
+
+    <div class="event-year reveal">
+      2026
+    </div>
+
+    <div class="event-date-row reveal">
+
+      <span class="event-month">
+        December
+      </span>
+
+      <span class="event-day">
+        03
+      </span>
+
+      <span class="event-weekday">
+        Thursday
+      </span>
+
+    </div>
+
+    <div class="event-time reveal">
+      6:00 to 10:00 P.M.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="location-title reveal">
+      Location
+    </div>
+
+    <p class="venue reveal">
+      MDA Cooperative Society,<br>
+      Gate #2, Sir Syed Block,<br>
+      Family Park, Near Zain Super Store,<br>
+      Multan, Pakistan
+    </p>
+
+    <a class="location-button reveal"
+       href="https://www.google.com/maps/search/?api=1&amp;query=Sir+Syed+Block%2C+M+A+Jinnah+Rd%2C+MDA+Officers+Cooperative+Housing+Society%2C+Multan%2C+60740%2C+Pakistan"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Open Mehndi location in Google Maps">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
+      </svg>
+
+      LOCATION
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- 4. WALIMA - OVAL INVITATION -->
+
+<section class="event-section" id="walima">
+
+  <span class="floral tr">❦</span>
+  <span class="floral bl">❦</span>
+
+  <div class="content event-invitation">
+
+    <p class="join-us reveal">
+      Join Us to Celebrate
+    </p>
+
+    <h2 class="event-heading reveal">
+      The Walima
+    </h2>
+
+    <div class="event-year reveal">
+      2026
+    </div>
+
+    <div class="event-date-row reveal">
+
+      <span class="event-month">
+        December
+      </span>
+
+      <span class="event-day">
+        06
+      </span>
+
+      <span class="event-weekday">
+        Sunday
+      </span>
+
+    </div>
+
+    <div class="event-time reveal">
+      6:00 to 9:00 P.M.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="location-title reveal">
+      Location
+    </div>
+
+    <p class="venue reveal">
+      IR Premier Event Complex,<br>
+      Bosan Road, Multan, Pakistan
+    </p>
+
+    <a class="location-button reveal"
+       href="https://www.google.com/maps/search/?api=1&amp;query=IR+Premier+Event+Complex+Bosan+Road+Multan+Pakistan"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Open Walima location in Google Maps">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
+      </svg>
+
+      LOCATION
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- 5. COUNTDOWN - FOUR BOXES -->
+
+<section class="countdown-section">
+
+  <div class="content countdown-frame">
+
+    <div class="ornament">❧ ✦ ❧</div>
+
+    <h2 class="countdown-heading reveal">
+      Counting Down to Our Mehndi
+    </h2>
+
+    <div class="countdown-grid reveal" id="countdown">
+
+      <div class="count-box">
+        <span class="count-number" id="days">00</span>
+        <span class="count-label">DAYS</span>
+      </div>
+
+      <div class="count-box">
+        <span class="count-number" id="hours">00</span>
+        <span class="count-label">HOURS</span>
+      </div>
+
+      <div class="count-box">
+        <span class="count-number" id="minutes">00</span>
+        <span class="count-label">MINUTES</span>
+      </div>
+
+      <div class="count-box">
+        <span class="count-number" id="seconds">00</span>
+        <span class="count-label">SECONDS</span>
+      </div>
+
+    </div>
 
     <div class="ornament">❧ ✦ ❧</div>
 
@@ -1177,314 +952,40 @@ body.opened .sparkles {
 
 </section>
 
-<!-- SECTION 3: MEHNDI -->
+<!-- 6. BLESSINGS -->
 
-<section class="event-scene mehndi-scene"
-         id="mehndi">
+<section class="blessing-section">
 
-  <div class="palace-arch"></div>
+  <span class="floral tl">❦</span>
+  <span class="floral br">❦</span>
 
-  <div class="garland" aria-hidden="true">
-    <span>🌼</span><span>🌼</span><span>🌿</span>
-    <span>🌼</span><span>🌼</span><span>🌼</span>
-    <span>🌿</span><span>🌼</span><span>🌼</span>
-    <span>🌼</span><span>🌿</span><span>🌼</span>
-    <span>🌼</span>
-  </div>
+  <div class="content">
 
-  <div class="lanterns" aria-hidden="true">
-    <span class="lantern"></span>
-    <span class="lantern"></span>
-    <span class="lantern"></span>
-  </div>
-
-  <div class="event-sign mehndi-sign reveal">
-
-    <div class="event-flourish">
-      ❧ ✦ ❧
-    </div>
-
-    <h2 class="sign-title">
-      Mehndi Night
-    </h2>
-
-    <div class="sign-year">
-      2026
-    </div>
-
-    <div class="sign-date">
-
-      <span class="sign-month">
-        December
-      </span>
-
-      <span class="sign-day">
-        03
-      </span>
-
-      <span class="sign-weekday">
-        Thursday
-      </span>
-
-    </div>
-
-    <div class="sign-time">
-      6:00 PM – 10:00 PM
-    </div>
-
-    <div class="sign-rule"></div>
-
-    <div class="location-heading">
-      Location
-    </div>
-
-    <div class="location-name">
-      To Be Announced
-    </div>
-
-    <span class="map-coming">
-      Google Maps Link Coming Soon
-    </span>
-
-    <div class="event-flourish">
-      ❧ ✦ ❧
-    </div>
-
-  </div>
-
-  <div class="stage-flowers" aria-hidden="true">
-    <span>🌼🌿</span>
-    <span>🌿🌼</span>
-  </div>
-
-  <div class="vintage-car" aria-hidden="true">
-    <div class="car-top"></div>
-    <div class="car-body"></div>
-    <div class="car-wheel left"></div>
-    <div class="car-wheel right"></div>
-    <div class="car-flowers">
-      🌸🌿🌼🌷🌼🌿🌸
-    </div>
-  </div>
-
-  <div class="scene-caption">
-    A NIGHT OF JOY & CELEBRATION
-  </div>
-
-</section>
-
-<!-- SECTION 4: WALIMA -->
-
-<section class="event-scene walima-scene"
-         id="walima">
-
-  <div class="palace-arch"></div>
-
-  <div class="garland" aria-hidden="true">
-    <span>🤍</span><span>🌸</span><span>🌿</span>
-    <span>🤍</span><span>🌸</span><span>🤍</span>
-    <span>🌿</span><span>🌸</span><span>🤍</span>
-    <span>🌸</span><span>🌿</span><span>🤍</span>
-  </div>
-
-  <div class="lanterns" aria-hidden="true">
-    <span class="lantern"></span>
-    <span class="lantern"></span>
-    <span class="lantern"></span>
-  </div>
-
-  <div class="event-sign walima-sign reveal">
-
-    <div class="event-flourish">
-      ❧ ✦ ❧
-    </div>
-
-    <h2 class="sign-title">
-      Walima
-    </h2>
-
-    <div class="sign-year">
-      2026
-    </div>
-
-    <div class="sign-date">
-
-      <span class="sign-month">
-        December
-      </span>
-
-      <span class="sign-day">
-        06
-      </span>
-
-      <span class="sign-weekday">
-        Sunday
-      </span>
-
-    </div>
-
-    <div class="sign-time">
-      6:00 PM – 9:00 PM
-    </div>
-
-    <div class="sign-rule"></div>
-
-    <div class="location-heading">
-      Location
-    </div>
-
-    <div class="location-name">
-      IR Premier Event Complex<br>
-      Multan, Pakistan
-    </div>
-
-    <a
-      class="map-link"
-      href="https://www.google.com/maps/search/?api=1&amp;query=IR+Premier+Event+Complex+Multan+Pakistan"
-      target="_blank"
-      rel="noopener noreferrer">
-      📍 View on Google Maps
-    </a>
-
-    <div class="event-flourish">
-      ❧ ✦ ❧
-    </div>
-
-  </div>
-
-  <div class="stage-flowers" aria-hidden="true">
-    <span>🌹🤍</span>
-    <span>🤍🌹</span>
-  </div>
-
-  <div class="vintage-car" aria-hidden="true">
-    <div class="car-top"></div>
-    <div class="car-body"></div>
-    <div class="car-wheel left"></div>
-    <div class="car-wheel right"></div>
-    <div class="car-flowers">
-      🌸🤍🌹🌸🌹🤍🌸
-    </div>
-  </div>
-
-  <div class="scene-caption">
-    AN EVENING OF LOVE & BLESSINGS
-  </div>
-
-</section>
-
-<!-- SECTION 5: COUNTDOWN -->
-
-<section class="countdown-section">
-
-  <div>
-
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
-
-    <h2 class="reveal">
-      Counting Down<br>
-      to Our Mehndi
-    </h2>
-
-    <div class="countdown-grid reveal"
-         id="countdown">
-
-      <div class="count-box">
-        <span class="count-number" id="days">
-          00
-        </span>
-        <span class="count-label">
-          DAYS
-        </span>
-      </div>
-
-      <div class="count-box">
-        <span class="count-number" id="hours">
-          00
-        </span>
-        <span class="count-label">
-          HOURS
-        </span>
-      </div>
-
-      <div class="count-box">
-        <span class="count-number" id="minutes">
-          00
-        </span>
-        <span class="count-label">
-          MINUTES
-        </span>
-      </div>
-
-    </div>
-
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SECTION 6: ALLAH'S BLESSINGS -->
-
-<section class="paper blessings">
-
-  <div class="floral tl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral tr">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral bl">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="floral br">
-    <span class="branch">❧</span>
-    <span class="buds">✿ ✿ ✿</span>
-  </div>
-
-  <div class="paper-content">
-
-    <p class="blessing-message reveal">
-      May Allah (SWT) bless their union
-      with love, mercy, happiness,
-      and barakah, and grant them
+    <p class="blessing reveal">
+      May Allah (SWT) bless their union with love,
+      mercy, happiness, and barakah, and grant them
       a lifetime of togetherness.
     </p>
 
     <div class="ameen reveal">
-      AMEEN
+      Ameen
     </div>
 
     <div class="divider"></div>
 
-    <div class="closing-script reveal">
-      We look forward to
-      celebrating this blessed
-      occasion with you.
-    </div>
+    <p class="closing reveal">
+      We look forward to celebrating
+      this blessed occasion with you.
+    </p>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
-    <p class="closing-bottom reveal">
+    <p class="invite reveal">
       With Love,<br>
       The Groom's Family
     </p>
 
   </div>
-
-  <div class="pearl-trail"></div>
 
 </section>
 
@@ -1492,246 +993,158 @@ body.opened .sparkles {
 
 <!-- OPENING COVER -->
 
-<div
-  class="cover"
-  id="cover"
-  role="button"
-  tabindex="0"
-  aria-label="Open wedding invitation">
+<div class="cover"
+     id="cover"
+     role="button"
+     tabindex="0"
+     aria-label="Open wedding invitation">
 
-  <div class="cover-half cover-left"></div>
-  <div class="cover-half cover-right"></div>
+  <div class="door left"></div>
+  <div class="door right"></div>
 
 </div>
 
-<!-- MUSIC -->
+<!-- BACKGROUND MUSIC -->
 
-<audio id="weddingMusic" loop preload="auto">
+<audio id="music" loop preload="auto">
   <source src="wedding-music.m4a" type="audio/mp4">
+  <source src="wedding-music.mp3" type="audio/mpeg">
 </audio>
 
-<button
-  class="music-button"
-  id="musicButton"
-  aria-label="Play wedding music"
-  aria-pressed="false"
-  hidden>
-  <span id="musicIcon">♪</span>
+<button class="music-button"
+        id="musicButton"
+        aria-label="Play wedding music"
+        hidden>
+  ♪
 </button>
 
 <script>
 
-/* COVER OPENING */
+/* OPEN INVITATION */
 
 const cover = document.getElementById("cover");
-const weddingMusic = document.getElementById("weddingMusic");
+const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
-const musicIcon = document.getElementById("musicIcon");
 
-weddingMusic.volume = 0.45;
+music.volume = 0.45;
 
 function updateMusicButton() {
+  const playing = !music.paused;
 
-  const playing = !weddingMusic.paused;
-
-  musicIcon.textContent = playing ? "♫" : "♪";
-
-  musicButton.classList.toggle(
-    "playing",
-    playing
-  );
-
-  musicButton.setAttribute(
-    "aria-pressed",
-    String(playing)
-  );
+  musicButton.textContent = playing ? "♫" : "♪";
 
   musicButton.setAttribute(
     "aria-label",
-    playing
-      ? "Pause wedding music"
-      : "Play wedding music"
+    playing ? "Pause wedding music" : "Play wedding music"
   );
 }
 
 function openInvitation() {
-
   if (cover.classList.contains("open")) return;
 
   cover.classList.add("open");
-
-  /* Start music when cover is tapped */
-
   musicButton.hidden = false;
 
-  weddingMusic.play().catch(() => {
-    updateMusicButton();
-  });
-
-  /* Enable scrolling after the doors open */
+  music.play().catch(updateMusicButton);
 
   setTimeout(() => {
-
     cover.classList.add("hidden");
-
     document.body.classList.add("opened");
-
-    window.scrollTo(0,0);
-
-    revealSections();
-
+    window.scrollTo(0, 0);
+    revealVisible();
   }, 2000);
 }
 
 cover.addEventListener("click", openInvitation);
 
 cover.addEventListener("keydown", function(event) {
-
-  if (
-    event.key === "Enter" ||
-    event.key === " "
-  ) {
+  if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     openInvitation();
   }
-
 });
 
-/* MUSIC PLAY / PAUSE */
+/* MUSIC CONTROL */
 
 musicButton.addEventListener("click", function() {
-
-  if (weddingMusic.paused) {
-
-    weddingMusic.play().catch(() => {
-      updateMusicButton();
-    });
-
+  if (music.paused) {
+    music.play().catch(updateMusicButton);
   } else {
-
-    weddingMusic.pause();
-
+    music.pause();
   }
-
 });
 
-weddingMusic.addEventListener(
-  "play",
-  updateMusicButton
-);
+music.addEventListener("play", updateMusicButton);
+music.addEventListener("pause", updateMusicButton);
 
-weddingMusic.addEventListener(
-  "pause",
-  updateMusicButton
-);
+/* GOLDEN SPARKLES */
 
-/* GOLD SPARKLES */
+const sparkleArea = document.getElementById("sparkles");
 
-const sparkleContainer =
-  document.getElementById("sparkles");
+for (let i = 0; i < 35; i++) {
+  const dot = document.createElement("span");
 
-for (let i = 0; i < 38; i++) {
+  dot.className = "sparkle";
 
-  const sparkle = document.createElement("span");
-
-  sparkle.className = "sparkle";
-
-  sparkle.style.left =
-    Math.random() * 100 + "%";
-
-  sparkle.style.top =
-    Math.random() * 100 + "%";
+  dot.style.left = Math.random() * 100 + "%";
+  dot.style.top = Math.random() * 100 + "%";
 
   const size = 2 + Math.random() * 3;
 
-  sparkle.style.width = size + "px";
-  sparkle.style.height = size + "px";
+  dot.style.width = size + "px";
+  dot.style.height = size + "px";
 
-  sparkle.style.animationDuration =
-    (4 + Math.random() * 6) + "s";
+  dot.style.animationDelay = (-Math.random() * 8) + "s";
+  dot.style.animationDuration = (4 + Math.random() * 5) + "s";
 
-  sparkle.style.animationDelay =
-    (-Math.random() * 10) + "s";
-
-  sparkleContainer.appendChild(sparkle);
-
+  sparkleArea.appendChild(dot);
 }
 
 /* SCROLL ANIMATIONS */
 
-const revealItems =
-  document.querySelectorAll(".reveal");
+const revealItems = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
   function(entries) {
-
     entries.forEach(function(entry) {
-
       if (entry.isIntersecting) {
-
         entry.target.classList.add("visible");
-
         observer.unobserve(entry.target);
-
       }
-
     });
-
   },
-  { threshold:0.08 }
+  {threshold: 0.05}
 );
 
 revealItems.forEach(function(item) {
   observer.observe(item);
 });
 
-function revealSections() {
-
+function revealVisible() {
   revealItems.forEach(function(item) {
-
-    const rectangle =
-      item.getBoundingClientRect();
-
-    if (rectangle.top < window.innerHeight) {
+    if (item.getBoundingClientRect().top < innerHeight) {
       item.classList.add("visible");
     }
-
   });
-
 }
 
-/* LIVE COUNTDOWN */
+/* LIVE COUNTDOWN - PAKISTAN TIME */
 
-const weddingDate = new Date(
-  "2026-12-03T18:00:00+05:00"
-).getTime();
+const eventTime = new Date("2026-12-03T18:00:00+05:00").getTime();
 
 function updateCountdown() {
+  const remaining = eventTime - Date.now();
 
-  const difference =
-    weddingDate - Date.now();
-
-  if (difference <= 0) {
-
-    document.getElementById(
-      "countdown"
-    ).innerHTML =
-      '<div class="countdown-done">The Celebration Has Begun!</div>';
-
+  if (remaining <= 0) {
+    document.getElementById("countdown").innerHTML =
+      '<div class="countdown-finished">The Celebration Has Begun!</div>';
     return;
   }
 
-  const days = Math.floor(
-    difference / (1000 * 60 * 60 * 24)
-  );
-
-  const hours = Math.floor(
-    (difference / (1000 * 60 * 60)) % 24
-  );
-
-  const minutes = Math.floor(
-    (difference / (1000 * 60)) % 60
-  );
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining / 3600000) % 24);
+  const minutes = Math.floor((remaining / 60000) % 60);
+  const seconds = Math.floor((remaining / 1000) % 60);
 
   document.getElementById("days").textContent =
     String(days).padStart(2, "0");
@@ -1742,10 +1155,11 @@ function updateCountdown() {
   document.getElementById("minutes").textContent =
     String(minutes).padStart(2, "0");
 
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "0");
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
 
 </script>

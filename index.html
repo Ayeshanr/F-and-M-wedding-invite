@@ -4,15 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#390817">
+<meta name="theme-color" content="#350613">
 
-<title>Muhammad Faizan & Sidra tul-Muntaha | Wedding Invitation</title>
+<title>Faizan & Muntaha | Wedding Invitation</title>
 
-<!-- WHATSAPP LINK PREVIEW -->
+<!-- WHATSAPP PREVIEW -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="You're Invited • Faizan & Muntaha">
-<meta property="og:description" content="Tap to open our wedding invitation • Mehndi 3 Dec • Walima 6 Dec 2026">
+<meta property="og:description" content="Join us for our wedding celebrations • Mehndi 3 December • Walima 6 December 2026">
 <meta property="og:image" content="https://ayeshanr.github.io/F-and-M-wedding-invite/whatsapp-preview.png">
+<meta property="og:image:secure_url" content="https://ayeshanr.github.io/F-and-M-wedding-invite/whatsapp-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1648">
+<meta property="og:image:height" content="928">
 <meta property="og:image:alt" content="Faizan and Muntaha Wedding Invitation">
 <meta property="og:url" content="https://ayeshanr.github.io/F-and-M-wedding-invite/">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,12 +24,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
+
+/* =====================================
+   COLORS - MATCHING ORIGINAL F/M COVER
+   ===================================== */
+
 :root {
-  --deep:#390817;
-  --red:#650b25;
-  --rose:#7b1733;
-  --gold:#d8b57c;
-  --ivory:#fff0dc;
+  --deep:#350613;
+  --red:#540b20;
+  --rose:#68132a;
+  --gold:#c5a17d;
+  --ivory:#f0dfd1;
+  --softgold:#e0c2a5;
 }
 
 * {
@@ -53,27 +63,29 @@ button {
   cursor:pointer;
 }
 
-/* DARK BURGUNDY BACKGROUND */
+/* =====================================
+   DARK BURGUNDY BACKGROUND
+   ===================================== */
 
 main {
   position:relative;
   background:
     radial-gradient(
       ellipse at 50% 18%,
-      rgba(105,22,43,.25),
-      transparent 48%
+      rgba(110,28,49,.15),
+      transparent 50%
     ),
     radial-gradient(
       ellipse at 50% 68%,
-      rgba(95,15,36,.22),
-      transparent 48%
+      rgba(100,20,43,.12),
+      transparent 50%
     ),
     linear-gradient(
       180deg,
-      #3d0917 0%,
-      #4b0c20 35%,
-      #410a1b 70%,
-      #2b0710 100%
+      #420817 0%,
+      #510c21 35%,
+      #480a1b 70%,
+      #300611 100%
     );
 }
 
@@ -119,14 +131,16 @@ section {
   );
 }
 
-/* GOLD FLORAL CORNERS */
+/* =====================================
+   FLORAL CORNERS
+   ===================================== */
 
 .floral {
   position:absolute;
   z-index:1;
   font-size:clamp(40px,8vw,80px);
   color:var(--gold);
-  opacity:.45;
+  opacity:.35;
   pointer-events:none;
 }
 
@@ -173,7 +187,7 @@ section {
   gap:clamp(4px,1.1vh,11px);
 }
 
-/* SLOWER TEXT FADE-IN DURING DOOR OPENING */
+/* SLOW WRITING APPEARANCE */
 
 .announcement .content {
   opacity:0;
@@ -188,54 +202,56 @@ body.invitation-revealed .announcement .content {
   transform:translateY(0);
 }
 
+/* SLIGHTLY LARGER FIRST-PAGE FONTS */
+
 .bismillah {
-  font-size:clamp(23px,3.3vw,37px);
+  font-size:clamp(25px,3.5vw,39px);
   line-height:1.4;
   margin:0 0 5px;
 }
 
 .intro {
   font-family:"Playfair Display",serif;
-  font-size:clamp(15px,2vw,21px);
+  font-size:clamp(16px,2.1vw,22px);
   font-style:italic;
   line-height:1.5;
   margin:3px 0;
 }
 
 .parents {
-  font-size:clamp(19px,2.5vw,28px);
+  font-size:clamp(20px,2.7vw,29px);
   font-weight:600;
   letter-spacing:.4px;
   margin:4px 0;
 }
 
 .invite {
-  font-size:clamp(17px,2.2vw,23px);
+  font-size:clamp(18px,2.3vw,24px);
   font-style:italic;
   line-height:1.4;
   margin:3px 0;
 }
 
 .ceremony {
-  font-size:clamp(27px,3.5vw,40px);
+  font-size:clamp(29px,3.7vw,42px);
   margin:4px 0;
 }
 
 .name {
-  font-size:clamp(55px,7.5vw,105px);
+  font-size:clamp(58px,7.8vw,108px);
   line-height:1.08;
-  color:#ffe0b5;
+  color:var(--softgold);
   margin:2px 0;
 }
 
 .with {
-  font-size:clamp(35px,5vw,57px);
+  font-size:clamp(37px,5.2vw,59px);
   line-height:1;
   margin:0;
 }
 
 .daughter {
-  font-size:clamp(17px,2.2vw,23px);
+  font-size:clamp(18px,2.3vw,24px);
   margin:4px 0;
 }
 
@@ -243,7 +259,9 @@ body.invitation-revealed .announcement .content {
   margin:7px auto;
 }
 
-/* SCROLL TO EXPLORE */
+/* =====================================
+   SCROLL TO EXPLORE
+   ===================================== */
 
 .scroll-hint {
   position:absolute;
@@ -255,7 +273,7 @@ body.invitation-revealed .announcement .content {
   flex-direction:column;
   align-items:center;
   gap:4px;
-  color:#f4d6a6;
+  color:#d9b99a;
   font-size:12px;
   letter-spacing:2.5px;
   text-transform:uppercase;
@@ -265,7 +283,7 @@ body.invitation-revealed .announcement .content {
   transition:opacity 1.5s ease;
 }
 
-body.invitation-revealed .scroll-hint {
+body.opened .scroll-hint {
   opacity:1;
 }
 
@@ -285,7 +303,7 @@ body.invitation-revealed .scroll-hint {
 }
 
 /* =====================================
-   SECOND SECTION - WEDDING DATES
+   SECOND PAGE - DATES
    ===================================== */
 
 .dates-section {
@@ -306,7 +324,7 @@ body.invitation-revealed .scroll-hint {
   font-family:"Great Vibes",cursive;
   font-size:30px;
   font-weight:400;
-  color:#ffe0b5;
+  color:var(--softgold);
   margin:12px 0;
 }
 
@@ -317,7 +335,7 @@ body.invitation-revealed .scroll-hint {
 }
 
 /* =====================================
-   MEHNDI AND WALIMA CARDS
+   MEHNDI AND WALIMA
    ===================================== */
 
 .event-section {
@@ -327,11 +345,11 @@ body.invitation-revealed .scroll-hint {
 .event-invitation {
   max-width:620px;
   padding:60px 26px;
-  border:1px solid rgba(215,180,123,.65);
+  border:1px solid rgba(197,161,125,.55);
   border-radius:
     45% 45% 30% 30% /
     13% 13% 10% 10%;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.02);
   box-shadow:0 0 45px rgba(0,0,0,.07);
 }
 
@@ -339,7 +357,7 @@ body.invitation-revealed .scroll-hint {
   content:"";
   position:absolute;
   inset:9px;
-  border:1px solid rgba(215,180,123,.22);
+  border:1px solid rgba(197,161,125,.2);
   border-radius:inherit;
   pointer-events:none;
 }
@@ -357,7 +375,7 @@ body.invitation-revealed .scroll-hint {
   font-size:clamp(60px,12vw,95px);
   font-weight:400;
   line-height:1.15;
-  color:#ffe0b5;
+  color:var(--softgold);
   margin:0 0 25px;
 }
 
@@ -383,13 +401,11 @@ body.invitation-revealed .scroll-hint {
   font-size:clamp(20px,4.5vw,33px);
 }
 
-/* SMALL GOLD DATE SEPARATORS */
-
 .event-day {
   position:relative;
   font-size:clamp(65px,13vw,100px);
   line-height:1;
-  color:#ffe0b5;
+  color:var(--softgold);
   padding:0 17px;
 }
 
@@ -404,7 +420,7 @@ body.invitation-revealed .scroll-hint {
   background:linear-gradient(
     180deg,
     transparent,
-    rgba(216,181,124,.85),
+    rgba(197,161,125,.75),
     transparent
   );
 }
@@ -421,8 +437,6 @@ body.invitation-revealed .scroll-hint {
   font-size:clamp(21px,4.5vw,30px);
   margin:17px 0;
 }
-
-/* VENUE HEADING */
 
 .location-title {
   font-size:25px;
@@ -443,7 +457,7 @@ body.invitation-revealed .scroll-hint {
   padding:4px 8px;
   border:none;
   background:transparent;
-  color:#f6d4a3;
+  color:#d9b99a;
   font-family:"Cormorant Garamond",serif;
   font-size:14px;
   font-weight:600;
@@ -472,11 +486,11 @@ body.invitation-revealed .scroll-hint {
 .countdown-frame {
   max-width:620px;
   padding:55px 25px;
-  border:1px solid rgba(215,180,123,.55);
+  border:1px solid rgba(197,161,125,.5);
   border-radius:
     45% 45% 30% 30% /
     15% 15% 12% 12%;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.02);
 }
 
 .countdown-heading {
@@ -484,7 +498,7 @@ body.invitation-revealed .scroll-hint {
   font-size:clamp(30px,6vw,48px);
   font-weight:500;
   line-height:1.2;
-  color:#ffe0b5;
+  color:var(--softgold);
   margin:0 0 30px;
 }
 
@@ -497,9 +511,9 @@ body.invitation-revealed .scroll-hint {
 .count-box {
   min-width:0;
   padding:17px 4px;
-  border:1px solid rgba(215,180,123,.65);
+  border:1px solid rgba(197,161,125,.55);
   border-radius:5px;
-  background:rgba(255,255,255,.035);
+  background:rgba(255,255,255,.025);
 }
 
 .count-number {
@@ -536,7 +550,7 @@ body.invitation-revealed .scroll-hint {
 .ameen {
   font-family:"Parisienne",cursive;
   font-size:clamp(36px,7vw,49px);
-  color:#ffe0b5;
+  color:var(--softgold);
   margin:15px 0;
 }
 
@@ -551,7 +565,7 @@ body.invitation-revealed .scroll-hint {
 }
 
 /* =====================================
-   ORIGINAL TWO-DOOR COVER
+   ORIGINAL F/M TWO-DOOR COVER
    ===================================== */
 
 .cover {
@@ -562,14 +576,12 @@ body.invitation-revealed .scroll-hint {
   height:100dvh;
   z-index:1000;
   overflow:hidden;
-  background:#390817;
+  background:#350613;
   perspective:1400px;
   cursor:pointer;
   touch-action:manipulation;
   isolation:isolate;
 }
-
-/* IMAGE SPLIT INTO TWO DOORS */
 
 .cover-door {
   position:absolute;
@@ -582,7 +594,7 @@ body.invitation-revealed .scroll-hint {
   backface-visibility:hidden;
   transform-style:preserve-3d;
 
-  /* SLOWER AND SMOOTHER DOOR OPENING */
+  /* SLOWER DOOR OPENING */
   transition:transform 2.8s cubic-bezier(.45,0,.2,1);
 }
 
@@ -598,8 +610,6 @@ body.invitation-revealed .scroll-hint {
   transform-origin:right center;
 }
 
-/* OPEN FROM BOTH SIDES */
-
 .cover.open .cover-door.left {
   transform:rotateY(-110deg);
 }
@@ -607,8 +617,6 @@ body.invitation-revealed .scroll-hint {
 .cover.open .cover-door.right {
   transform:rotateY(110deg);
 }
-
-/* REVEAL ANNOUNCEMENT THROUGH OPENING */
 
 .cover.open {
   background:transparent;
@@ -619,35 +627,10 @@ body.invitation-revealed .scroll-hint {
   display:none;
 }
 
-/* =====================================
-   TAP TO OPEN TEXT
-   ===================================== */
-
-.tap-to-open {
-  position:absolute;
-  bottom:7%;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:10;
-  color:#fff0dc;
-  font-family:"Cormorant Garamond",serif;
-  font-size:18px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  text-shadow:0 2px 8px #390817;
-  white-space:nowrap;
-  transition:
-    opacity .15s ease,
-    visibility .15s ease;
-  pointer-events:none;
-}
-
-/* DISAPPEARS IMMEDIATELY WHEN TAPPED */
-
-.cover.open .tap-to-open {
-  opacity:0;
-  visibility:hidden;
-}
+/*
+  NO EXTRA TAP TO OPEN TEXT.
+  IT IS ALREADY PRINTED ON cover.jpg.
+*/
 
 /* =====================================
    MUSIC BUTTON
@@ -663,7 +646,7 @@ body.invitation-revealed .scroll-hint {
   border-radius:50%;
   border:1px solid var(--gold);
   background:var(--deep);
-  color:#ffe0b5;
+  color:var(--softgold);
   font-size:23px;
 }
 
@@ -672,7 +655,7 @@ body.invitation-revealed .scroll-hint {
 }
 
 /* =====================================
-   GOLDEN SPARKLES
+   SPARKLES
    ===================================== */
 
 .sparkles {
@@ -691,8 +674,8 @@ body.opened .sparkles {
 .sparkle {
   position:absolute;
   border-radius:50%;
-  background:#ffe2a1;
-  box-shadow:0 0 8px #f4c879;
+  background:#d9b99a;
+  box-shadow:0 0 7px rgba(197,161,125,.5);
   animation:twinkle 5s infinite;
 }
 
@@ -703,13 +686,13 @@ body.opened .sparkles {
   }
 
   50% {
-    opacity:.8;
+    opacity:.65;
     transform:translateY(-15px);
   }
 }
 
 /* =====================================
-   THREE-COLOR SLOW FALLING PETALS
+   SLOW FALLING PETALS
    ===================================== */
 
 .petals {
@@ -746,40 +729,30 @@ body.opened .petals {
   animation:petal-spin ease-in-out infinite alternate;
 }
 
-/* GOLD PETALS */
-
 .petal.gold .petal-shape {
   background:linear-gradient(
     135deg,
-    #fff1bc,
-    #e9c77d 35%,
-    #c59648 70%,
-    #f7dda0
+    #e2c9a6,
+    #c5a17d 45%,
+    #9c7654
   );
-  box-shadow:0 0 5px rgba(244,200,114,.3);
 }
-
-/* BURGUNDY PETALS */
 
 .petal.burgundy .petal-shape {
   background:linear-gradient(
     135deg,
-    #bd6075,
-    #8f2e49 40%,
-    #5b1028 80%,
-    #a84963
+    #a04d61,
+    #75213c 45%,
+    #4b1025
   );
 }
-
-/* IVORY PETALS */
 
 .petal.ivory .petal-shape {
   background:linear-gradient(
     135deg,
-    #fffdf1,
-    #fff0d6 40%,
-    #dec9aa 80%,
-    #fff8e9
+    #f4e8da,
+    #dfcbb6 50%,
+    #bfa58d
   );
 }
 
@@ -790,7 +763,7 @@ body.opened .petals {
   }
 
   8%,88% {
-    opacity:.45;
+    opacity:.4;
   }
 
   100% {
@@ -834,7 +807,7 @@ body.opened .petals {
   transform:translateY(0);
 }
 
-/* FIRST PAGE FADES AS ONE */
+/* FIRST PAGE APPEARS TOGETHER */
 
 .announcement .reveal {
   opacity:1;
@@ -854,15 +827,10 @@ body.opened .petals {
   .cover-door {
     height:100%;
   }
-
-  .tap-to-open {
-    bottom:8%;
-    font-size:15px;
-    letter-spacing:2px;
-  }
 }
 
 @media(max-width:480px) {
+
   .announcement {
     padding:22px 16px 76px;
   }
@@ -873,35 +841,35 @@ body.opened .petals {
   }
 
   .announcement .bismillah {
-    font-size:20px;
+    font-size:21px;
   }
 
   .announcement .intro {
-    font-size:12px;
+    font-size:13px;
   }
 
   .announcement .parents {
-    font-size:16px;
+    font-size:17px;
   }
 
   .announcement .invite {
-    font-size:14px;
+    font-size:15px;
   }
 
   .announcement .ceremony {
-    font-size:23px;
+    font-size:24px;
   }
 
   .announcement .name {
-    font-size:clamp(39px,9vw,54px);
+    font-size:clamp(41px,9.3vw,56px);
   }
 
   .announcement .with {
-    font-size:31px;
+    font-size:33px;
   }
 
   .announcement .daughter {
-    font-size:14px;
+    font-size:15px;
   }
 
   .announcement .ornament {
@@ -938,6 +906,7 @@ body.opened .petals {
 }
 
 @media(max-height:700px) {
+
   .announcement .content {
     min-height:auto;
     gap:3px;
@@ -959,6 +928,7 @@ body.opened .petals {
 }
 
 @media(prefers-reduced-motion:reduce) {
+
   .reveal {
     opacity:1;
     transform:none;
@@ -972,7 +942,12 @@ body.opened .petals {
   .cover-door {
     transition-duration:.25s;
   }
+
+  .announcement .content {
+    transition-duration:.25s;
+  }
 }
+
 </style>
 </head>
 
@@ -986,7 +961,7 @@ body.opened .petals {
 <main>
 
 <!-- =====================================
-     FIRST WEDDING ANNOUNCEMENT
+     FIRST PAGE
      ===================================== -->
 
 <section class="announcement" id="welcome">
@@ -1055,7 +1030,7 @@ body.opened .petals {
 </section>
 
 <!-- =====================================
-     SECOND SECTION
+     SECOND PAGE - DATES
      ===================================== -->
 
 <section class="dates-section" id="dates">
@@ -1084,6 +1059,7 @@ body.opened .petals {
     </div>
 
   </div>
+
 </section>
 
 <!-- =====================================
@@ -1156,6 +1132,7 @@ body.opened .petals {
     </a>
 
   </div>
+
 </section>
 
 <!-- =====================================
@@ -1226,6 +1203,7 @@ body.opened .petals {
     </a>
 
   </div>
+
 </section>
 
 <!-- =====================================
@@ -1273,6 +1251,7 @@ body.opened .petals {
     </div>
 
   </div>
+
 </section>
 
 <!-- =====================================
@@ -1313,12 +1292,13 @@ body.opened .petals {
     </p>
 
   </div>
+
 </section>
 
 </main>
 
 <!-- =====================================
-     ORIGINAL TWO-DOOR COVER
+     ORIGINAL F/M COVER
      ===================================== -->
 
 <div class="cover"
@@ -1328,12 +1308,7 @@ body.opened .petals {
      aria-label="Tap anywhere to open wedding invitation">
 
   <div class="cover-door left"></div>
-
   <div class="cover-door right"></div>
-
-  <div class="tap-to-open">
-    Tap to Open
-  </div>
 
 </div>
 
@@ -1356,7 +1331,7 @@ body.opened .petals {
 <script>
 
 /* =====================================
-   COVER OPENING AND MUSIC
+   COVER OPENING
    ===================================== */
 
 const cover=document.getElementById("cover");
@@ -1366,6 +1341,7 @@ const musicButton=document.getElementById("musicButton");
 music.volume=.45;
 
 function updateMusicButton() {
+
   const playing=!music.paused;
 
   musicButton.textContent=playing?"♫":"♪";
@@ -1376,40 +1352,45 @@ function updateMusicButton() {
       ?"Pause wedding music"
       :"Play wedding music"
   );
-}
 
-/* SLOWER OPENING AND WRITING FADE-IN */
+}
 
 function openInvitation() {
 
   if(cover.classList.contains("open")) return;
 
-  // Start opening both doors and hide Tap to Open
+  // Begin opening both doors
   cover.classList.add("open");
 
-  // Start text fade-in while doors are opening
-  requestAnimationFrame(()=>{
-    document.body.classList.add("invitation-revealed");
-  });
+  /*
+    Start the writing fade-in shortly after
+    the doors begin moving.
 
-  // Start wedding music
+    The writing appears gradually while
+    the doors are still opening.
+  */
+
+  setTimeout(()=>{
+    document.body.classList.add("invitation-revealed");
+  },350);
+
+  // Start music
   musicButton.hidden=false;
   music.play().catch(updateMusicButton);
 
-  // Wait for the slower door animation to finish
+  // Finish opening after 2.8 seconds
   setTimeout(()=>{
 
     cover.classList.add("hidden");
     document.body.classList.add("opened");
 
     window.scrollTo(0,0);
+
     revealVisible();
 
   },2900);
 
 }
-
-/* TAP ANYWHERE ON COVER */
 
 cover.addEventListener("click",openInvitation);
 
@@ -1431,9 +1412,13 @@ cover.addEventListener("keydown",event=>{
 musicButton.addEventListener("click",()=>{
 
   if(music.paused) {
+
     music.play().catch(updateMusicButton);
+
   } else {
+
     music.pause();
+
   }
 
 });
@@ -1442,7 +1427,7 @@ music.addEventListener("play",updateMusicButton);
 music.addEventListener("pause",updateMusicButton);
 
 /* =====================================
-   GOLDEN SPARKLES
+   SPARKLES
    ===================================== */
 
 const sparkleArea=document.getElementById("sparkles");
@@ -1472,7 +1457,7 @@ for(let i=0;i<35;i++) {
 }
 
 /* =====================================
-   THREE-COLOR SLOW FALLING PETALS
+   SLOW FALLING PETALS
    ===================================== */
 
 const petalArea=document.getElementById("petals");
@@ -1509,6 +1494,7 @@ for(let i=0;i<15;i++) {
   const duration=25+Math.random()*15;
 
   petal.style.animationDuration=duration+"s";
+
   petal.style.animationDelay=
     (-Math.random()*duration)+"s";
 
@@ -1549,7 +1535,9 @@ function revealVisible() {
   revealItems.forEach(item=>{
 
     if(item.getBoundingClientRect().top<innerHeight) {
+
       item.classList.add("visible");
+
     }
 
   });
@@ -1557,7 +1545,7 @@ function revealVisible() {
 }
 
 /* =====================================
-   LIVE COUNTDOWN - PAKISTAN TIME
+   COUNTDOWN - PAKISTAN TIME
    ===================================== */
 
 const eventTime=
@@ -1573,6 +1561,7 @@ function updateCountdown() {
       '<div class="countdown-finished">The Celebration Has Begun!</div>';
 
     return;
+
   }
 
   const days=Math.floor(remaining/86400000);

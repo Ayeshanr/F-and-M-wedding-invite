@@ -4,17 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#571426">
-
+<meta name="theme-color" content="#560b23">
 <title>Muhammad Faizan & Sidra tul-Muntaha | Wedding Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --deep:#400d1e;
-  --red:#651b2b;
-  --rose:#85374a;
+  --deep:#390817;
+  --red:#650b25;
+  --rose:#7b1733;
   --gold:#d8b57c;
   --ivory:#fff0dc;
 }
@@ -44,25 +43,27 @@ button {
   cursor:pointer;
 }
 
+/* ONE CONTINUOUS BURGUNDY BACKGROUND */
+
 main {
   position:relative;
   background:
     radial-gradient(
-      ellipse at 50% 12%,
-      rgba(155,70,88,.55),
-      transparent 33%
+      ellipse at 50% 18%,
+      rgba(139,25,55,.32),
+      transparent 48%
     ),
     radial-gradient(
-      ellipse at 50% 62%,
-      rgba(139,48,72,.48),
-      transparent 40%
+      ellipse at 50% 68%,
+      rgba(120,12,43,.30),
+      transparent 48%
     ),
     linear-gradient(
       180deg,
-      #55172a 0%,
-      #6d2539 32%,
-      #571729 65%,
-      #400d1e 100%
+      #560b23 0%,
+      #6b0e2b 35%,
+      #590b24 70%,
+      #390817 100%
     );
 }
 
@@ -75,8 +76,6 @@ section {
   padding:70px 22px;
   overflow:hidden;
 }
-
-/* NO BORDERS BETWEEN SECTIONS */
 
 .content {
   position:relative;
@@ -110,7 +109,7 @@ section {
   );
 }
 
-/* FLORAL CORNER DECORATIONS */
+/* GOLD FLORAL CORNERS */
 
 .floral {
   position:absolute;
@@ -144,70 +143,77 @@ section {
   transform:scale(-1);
 }
 
-/* FIRST WEDDING ANNOUNCEMENT */
+/* FIRST SCREEN - FULLER, NO BORDER */
 
 .announcement {
   min-height:100vh;
   min-height:100svh;
-  padding:34px 18px 85px;
+  padding:28px 22px 75px;
 }
 
 .announcement .content {
+  width:100%;
+  max-width:850px;
+  min-height:calc(100svh - 120px);
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:space-evenly;
 }
 
 .bismillah {
-  font-size:clamp(18px,4vw,28px);
+  font-size:clamp(23px,3.3vw,37px);
   line-height:1.5;
   margin:0 0 8px;
 }
 
 .intro {
   font-family:"Playfair Display",serif;
-  font-size:clamp(12px,2.5vw,16px);
+  font-size:clamp(15px,2vw,21px);
   font-style:italic;
-  line-height:1.45;
+  line-height:1.6;
   margin:5px 0;
 }
 
 .parents {
-  font-size:clamp(15px,3vw,21px);
+  font-size:clamp(19px,2.5vw,28px);
   font-weight:600;
   letter-spacing:.4px;
   margin:8px 0;
 }
 
 .invite {
-  font-size:clamp(14px,3vw,19px);
+  font-size:clamp(17px,2.2vw,23px);
   font-style:italic;
-  line-height:1.35;
+  line-height:1.4;
   margin:6px 0;
 }
 
 .ceremony {
-  font-size:clamp(20px,4vw,29px);
+  font-size:clamp(27px,3.5vw,40px);
   margin:7px 0;
 }
 
 .name {
-  font-size:clamp(41px,9vw,72px);
-  line-height:1.12;
+  font-size:clamp(55px,7.5vw,105px);
+  line-height:1.08;
   color:#ffe0b5;
-  margin:7px 0;
+  margin:3px 0;
 }
 
 .with {
-  font-size:clamp(29px,6vw,43px);
+  font-size:clamp(35px,5vw,57px);
   margin:0;
   line-height:1;
 }
 
 .daughter {
-  font-size:clamp(14px,3vw,19px);
+  font-size:clamp(17px,2.2vw,23px);
   margin:7px 0;
+}
+
+.announcement .ornament {
+  margin:9px auto;
 }
 
 /* SCROLL TO EXPLORE */
@@ -236,16 +242,11 @@ section {
 }
 
 @keyframes bounce {
-  0%,100% {
-    transform:translateY(0);
-  }
-
-  50% {
-    transform:translateY(7px);
-  }
+  0%,100% {transform:translateY(0)}
+  50% {transform:translateY(7px)}
 }
 
-/* SECOND SECTION - SHORTER */
+/* SECOND SECTION - COMPACT */
 
 .dates-section {
   min-height:auto;
@@ -272,21 +273,17 @@ section {
   line-height:1.4;
 }
 
-/* MEHNDI & WALIMA */
+/* MEHNDI AND WALIMA */
 
 .event-section {
   padding:85px 22px;
 }
 
-/* OVAL FRAME ONLY AROUND EVENT INVITATIONS */
-
 .event-invitation {
   max-width:620px;
   padding:60px 26px;
   border:1px solid rgba(215,180,123,.65);
-  border-radius:
-    45% 45% 30% 30% /
-    13% 13% 10% 10%;
+  border-radius:45% 45% 30% 30% / 13% 13% 10% 10%;
   background:rgba(255,255,255,.025);
   box-shadow:0 0 45px rgba(0,0,0,.07);
 }
@@ -358,7 +355,7 @@ section {
   margin:0 auto 16px;
 }
 
-/* SMALL LOCATION LINK */
+/* SMALL LOCATION SYMBOL */
 
 .location-button {
   display:inline-flex;
@@ -367,7 +364,6 @@ section {
   gap:4px;
   padding:4px 8px;
   border:none;
-  border-radius:0;
   background:transparent;
   color:#f6d4a3;
   font-family:"Cormorant Garamond",serif;
@@ -397,9 +393,7 @@ section {
   max-width:620px;
   padding:55px 25px;
   border:1px solid rgba(215,180,123,.55);
-  border-radius:
-    45% 45% 30% 30% /
-    15% 15% 12% 12%;
+  border-radius:45% 45% 30% 30% / 15% 15% 12% 12%;
   background:rgba(255,255,255,.025);
 }
 
@@ -419,7 +413,6 @@ section {
 }
 
 .count-box {
-  width:auto;
   min-width:0;
   padding:17px 4px;
   border:1px solid rgba(215,180,123,.65);
@@ -442,7 +435,7 @@ section {
   font-size:clamp(22px,4vw,32px);
 }
 
-/* CLOSING BLESSINGS */
+/* FINAL BLESSINGS */
 
 .blessing-section {
   padding:90px 22px 120px;
@@ -472,7 +465,7 @@ section {
   max-width:520px;
 }
 
-/* TWO-DOOR OPENING COVER */
+/* TWO-DOOR COVER */
 
 .cover {
   position:fixed;
@@ -512,17 +505,9 @@ section {
   pointer-events:none;
 }
 
-.cover.open .left {
-  transform:rotateY(-110deg);
-}
-
-.cover.open .right {
-  transform:rotateY(110deg);
-}
-
-.cover.hidden {
-  display:none;
-}
+.cover.open .left {transform:rotateY(-110deg)}
+.cover.open .right {transform:rotateY(110deg)}
+.cover.hidden {display:none}
 
 /* MUSIC BUTTON */
 
@@ -538,14 +523,13 @@ section {
   background:var(--deep);
   color:#ffe0b5;
   font-size:23px;
-  cursor:pointer;
 }
 
 .music-button[hidden] {
   display:none;
 }
 
-/* GOLDEN SPARKLES */
+/* GOLD SPARKLES */
 
 .sparkles {
   position:fixed;
@@ -569,15 +553,8 @@ body.opened .sparkles {
 }
 
 @keyframes twinkle {
-  0%,100% {
-    opacity:0;
-    transform:translateY(15px);
-  }
-
-  50% {
-    opacity:.8;
-    transform:translateY(-15px);
-  }
+  0%,100% {opacity:0;transform:translateY(15px)}
+  50% {opacity:.8;transform:translateY(-15px)}
 }
 
 /* SCROLL REVEAL */
@@ -585,9 +562,7 @@ body.opened .sparkles {
 .reveal {
   opacity:0;
   transform:translateY(20px);
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
+  transition:opacity .8s ease,transform .8s ease;
 }
 
 .reveal.visible {
@@ -595,23 +570,52 @@ body.opened .sparkles {
   transform:translateY(0);
 }
 
-/* MOBILE */
+/* PHONE SCREENS */
 
 @media(max-width:480px) {
   .announcement {
-    padding:25px 16px 78px;
+    padding:22px 16px 76px;
+  }
+
+  .announcement .content {
+    min-height:calc(100svh - 110px);
+    justify-content:space-evenly;
+  }
+
+  .announcement .bismillah {
+    font-size:20px;
+  }
+
+  .announcement .intro {
+    font-size:12px;
+  }
+
+  .announcement .parents {
+    font-size:16px;
+  }
+
+  .announcement .invite {
+    font-size:14px;
+  }
+
+  .announcement .ceremony {
+    font-size:23px;
+  }
+
+  .announcement .name {
+    font-size:clamp(39px,9vw,54px);
+  }
+
+  .announcement .with {
+    font-size:31px;
+  }
+
+  .announcement .daughter {
+    font-size:14px;
   }
 
   .announcement .ornament {
     margin:7px auto;
-  }
-
-  .announcement .name {
-    font-size:clamp(38px,9vw,54px);
-  }
-
-  .announcement .parents {
-    font-size:15px;
   }
 
   .event-section {
@@ -640,8 +644,12 @@ body.opened .sparkles {
 }
 
 @media(max-height:700px) {
+  .announcement .content {
+    min-height:auto;
+  }
+
   .announcement .name {
-    font-size:39px;
+    font-size:clamp(35px,7vw,65px);
   }
 
   .announcement .ornament {
@@ -670,13 +678,11 @@ body.opened .sparkles {
 
 <body>
 
-<!-- GOLDEN SPARKLES -->
-
 <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 
 <main>
 
-<!-- 1. WEDDING ANNOUNCEMENT - NO BOX -->
+<!-- FIRST WEDDING ANNOUNCEMENT -->
 
 <section class="announcement" id="welcome">
 
@@ -739,7 +745,7 @@ body.opened .sparkles {
 
 </section>
 
-<!-- 2. IN SHA ALLAH - SHORT SECTION -->
+<!-- SECOND SECTION -->
 
 <section class="dates-section" id="dates">
 
@@ -753,14 +759,14 @@ body.opened .sparkles {
 
     <div class="divider"></div>
 
-    <h2 class="inshallah script reveal">
-      In Sha Allah
+<h1 class="inshallah script reveal" style="font-size: 30px;"> In Sha Allah </h1>
+
     </h2>
 
-    <div class="date-range reveal">
-      3rd – 6th<br>
-      DECEMBER 2026
-    </div>
+    <div class="date-range reveal" style="font-family: 'Georgia', serif;">
+  3rd – 6th<br> DECEMBER 2026
+</div>
+
 
     <div class="ornament">❧ ✦ ❧</div>
 
@@ -768,7 +774,7 @@ body.opened .sparkles {
 
 </section>
 
-<!-- 3. MEHNDI - OVAL INVITATION -->
+<!-- MEHNDI -->
 
 <section class="event-section" id="mehndi">
 
@@ -785,24 +791,12 @@ body.opened .sparkles {
       The Mehndi
     </h2>
 
-    <div class="event-year reveal">
-      2026
-    </div>
+    <div class="event-year reveal">2026</div>
 
     <div class="event-date-row reveal">
-
-      <span class="event-month">
-        December
-      </span>
-
-      <span class="event-day">
-        03
-      </span>
-
-      <span class="event-weekday">
-        Thursday
-      </span>
-
+      <span class="event-month">December</span>
+      <span class="event-day">03</span>
+      <span class="event-weekday">Thursday</span>
     </div>
 
     <div class="event-time reveal">
@@ -831,16 +825,13 @@ body.opened .sparkles {
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
       </svg>
-
       LOCATION
-
     </a>
 
   </div>
-
 </section>
 
-<!-- 4. WALIMA - OVAL INVITATION -->
+<!-- WALIMA -->
 
 <section class="event-section" id="walima">
 
@@ -857,24 +848,12 @@ body.opened .sparkles {
       The Walima
     </h2>
 
-    <div class="event-year reveal">
-      2026
-    </div>
+    <div class="event-year reveal">2026</div>
 
     <div class="event-date-row reveal">
-
-      <span class="event-month">
-        December
-      </span>
-
-      <span class="event-day">
-        06
-      </span>
-
-      <span class="event-weekday">
-        Sunday
-      </span>
-
+      <span class="event-month">December</span>
+      <span class="event-day">06</span>
+      <span class="event-weekday">Sunday</span>
     </div>
 
     <div class="event-time reveal">
@@ -901,16 +880,13 @@ body.opened .sparkles {
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
       </svg>
-
       LOCATION
-
     </a>
 
   </div>
-
 </section>
 
-<!-- 5. COUNTDOWN - FOUR BOXES -->
+<!-- COUNTDOWN -->
 
 <section class="countdown-section">
 
@@ -949,10 +925,9 @@ body.opened .sparkles {
     <div class="ornament">❧ ✦ ❧</div>
 
   </div>
-
 </section>
 
-<!-- 6. BLESSINGS -->
+<!-- FINAL BLESSINGS -->
 
 <section class="blessing-section">
 
@@ -986,7 +961,6 @@ body.opened .sparkles {
     </p>
 
   </div>
-
 </section>
 
 </main>
@@ -1004,7 +978,7 @@ body.opened .sparkles {
 
 </div>
 
-<!-- BACKGROUND MUSIC -->
+<!-- WEDDING MUSIC -->
 
 <audio id="music" loop preload="auto">
   <source src="wedding-music.m4a" type="audio/mp4">
@@ -1014,13 +988,10 @@ body.opened .sparkles {
 <button class="music-button"
         id="musicButton"
         aria-label="Play wedding music"
-        hidden>
-  ♪
-</button>
+        hidden>♪</button>
 
 <script>
-
-/* OPEN INVITATION */
+/* OPENING DOORS AND MUSIC */
 
 const cover = document.getElementById("cover");
 const music = document.getElementById("music");
@@ -1064,7 +1035,7 @@ cover.addEventListener("keydown", function(event) {
   }
 });
 
-/* MUSIC CONTROL */
+/* MUSIC BUTTON */
 
 musicButton.addEventListener("click", function() {
   if (music.paused) {
@@ -1100,7 +1071,7 @@ for (let i = 0; i < 35; i++) {
   sparkleArea.appendChild(dot);
 }
 
-/* SCROLL ANIMATIONS */
+/* SCROLL REVEAL ANIMATIONS */
 
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -1161,7 +1132,6 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
-
 </script>
 
 </body>

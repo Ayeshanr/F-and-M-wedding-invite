@@ -8,6 +8,15 @@
 
 <title>Muhammad Faizan & Sidra tul-Muntaha | Wedding Invitation</title>
 
+<!-- WHATSAPP LINK PREVIEW -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="You're Invited • Faizan & Muntaha">
+<meta property="og:description" content="Tap to open our wedding invitation • Mehndi 3 Dec • Walima 6 Dec 2026">
+<meta property="og:image" content="https://ayeshanr.github.io/F-and-M-wedding-invite/whatsapp-preview.png">
+<meta property="og:image:alt" content="Faizan and Muntaha Wedding Invitation">
+<meta property="og:url" content="https://ayeshanr.github.io/F-and-M-wedding-invite/">
+<meta name="twitter:card" content="summary_large_image">
+
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
@@ -164,14 +173,14 @@ section {
   gap:clamp(4px,1.1vh,11px);
 }
 
-/* TEXT FADES IN WHILE COVER OPENS */
+/* SLOWER TEXT FADE-IN DURING DOOR OPENING */
 
 .announcement .content {
   opacity:0;
-  transform:translateY(16px);
+  transform:translateY(22px);
   transition:
-    opacity 1.5s ease,
-    transform 1.5s ease;
+    opacity 2.4s ease,
+    transform 2.4s ease;
 }
 
 body.invitation-revealed .announcement .content {
@@ -253,7 +262,7 @@ body.invitation-revealed .announcement .content {
   text-decoration:none;
   white-space:nowrap;
   opacity:0;
-  transition:opacity 1s ease;
+  transition:opacity 1.5s ease;
 }
 
 body.invitation-revealed .scroll-hint {
@@ -269,6 +278,7 @@ body.invitation-revealed .scroll-hint {
   0%,100% {
     transform:translateY(0);
   }
+
   50% {
     transform:translateY(7px);
   }
@@ -571,7 +581,9 @@ body.invitation-revealed .scroll-hint {
   background-size:200% 100%;
   backface-visibility:hidden;
   transform-style:preserve-3d;
-  transition:transform 2s ease-in-out;
+
+  /* SLOWER AND SMOOTHER DOOR OPENING */
+  transition:transform 2.8s cubic-bezier(.45,0,.2,1);
 }
 
 .cover-door.left {
@@ -630,7 +642,7 @@ body.invitation-revealed .scroll-hint {
   pointer-events:none;
 }
 
-/* DISAPPEARS AS SOON AS COVER OPENS */
+/* DISAPPEARS IMMEDIATELY WHEN TAPPED */
 
 .cover.open .tap-to-open {
   opacity:0;
@@ -1119,8 +1131,6 @@ body.opened .petals {
 
     <div class="divider"></div>
 
-    <!-- UPDATED TO VENUE -->
-
     <div class="location-title reveal">
       Venue:
     </div>
@@ -1192,8 +1202,6 @@ body.opened .petals {
     </div>
 
     <div class="divider"></div>
-
-    <!-- UPDATED TO VENUE -->
 
     <div class="location-title reveal">
       Venue:
@@ -1311,7 +1319,6 @@ body.opened .petals {
 
 <!-- =====================================
      ORIGINAL TWO-DOOR COVER
-     WITH TAP TO OPEN
      ===================================== -->
 
 <div class="cover"
@@ -1371,48 +1378,34 @@ function updateMusicButton() {
   );
 }
 
-/* OPEN INVITATION */
+/* SLOWER OPENING AND WRITING FADE-IN */
 
 function openInvitation() {
 
   if(cover.classList.contains("open")) return;
 
-  /*
-    Both doors begin opening.
-    Tap to Open disappears immediately.
-  */
-
+  // Start opening both doors and hide Tap to Open
   cover.classList.add("open");
 
-  /*
-    Announcement text starts fading in
-    immediately while the doors open.
-  */
+  // Start text fade-in while doors are opening
+  requestAnimationFrame(()=>{
+    document.body.classList.add("invitation-revealed");
+  });
 
-  document.body.classList.add("invitation-revealed");
-
-  /* START MUSIC */
-
+  // Start wedding music
   musicButton.hidden=false;
-
   music.play().catch(updateMusicButton);
 
-  /*
-    After doors finish opening,
-    hide cover and allow scrolling.
-  */
-
+  // Wait for the slower door animation to finish
   setTimeout(()=>{
 
     cover.classList.add("hidden");
-
     document.body.classList.add("opened");
 
     window.scrollTo(0,0);
-
     revealVisible();
 
-  },2100);
+  },2900);
 
 }
 
@@ -1420,14 +1413,11 @@ function openInvitation() {
 
 cover.addEventListener("click",openInvitation);
 
-/* KEYBOARD SUPPORT */
-
 cover.addEventListener("keydown",event=>{
 
   if(event.key==="Enter"||event.key===" ") {
 
     event.preventDefault();
-
     openInvitation();
 
   }
@@ -1441,13 +1431,9 @@ cover.addEventListener("keydown",event=>{
 musicButton.addEventListener("click",()=>{
 
   if(music.paused) {
-
     music.play().catch(updateMusicButton);
-
   } else {
-
     music.pause();
-
   }
 
 });
@@ -1500,7 +1486,6 @@ const petalColors=[
 for(let i=0;i<15;i++) {
 
   const petal=document.createElement("span");
-
   const petalShape=document.createElement("span");
 
   petal.className=
@@ -1508,13 +1493,10 @@ for(let i=0;i<15;i++) {
 
   petalShape.className="petal-shape";
 
-  petal.style.left=
-    Math.random()*100+"%";
+  petal.style.left=Math.random()*100+"%";
 
   const width=8+Math.random()*10;
-
-  const height=
-    width*(1.2+Math.random()*.4);
+  const height=width*(1.2+Math.random()*.4);
 
   petal.style.width=width+"px";
   petal.style.height=height+"px";
@@ -1526,9 +1508,7 @@ for(let i=0;i<15;i++) {
 
   const duration=25+Math.random()*15;
 
-  petal.style.animationDuration=
-    duration+"s";
-
+  petal.style.animationDuration=duration+"s";
   petal.style.animationDelay=
     (-Math.random()*duration)+"s";
 
@@ -1536,7 +1516,6 @@ for(let i=0;i<15;i++) {
     (3+Math.random()*5)+"s";
 
   petal.appendChild(petalShape);
-
   petalArea.appendChild(petal);
 
 }
@@ -1555,7 +1534,6 @@ const observer=new IntersectionObserver(entries=>{
     if(entry.isIntersecting) {
 
       entry.target.classList.add("visible");
-
       observer.unobserve(entry.target);
 
     }
@@ -1571,9 +1549,7 @@ function revealVisible() {
   revealItems.forEach(item=>{
 
     if(item.getBoundingClientRect().top<innerHeight) {
-
       item.classList.add("visible");
-
     }
 
   });
@@ -1597,20 +1573,12 @@ function updateCountdown() {
       '<div class="countdown-finished">The Celebration Has Begun!</div>';
 
     return;
-
   }
 
-  const days=
-    Math.floor(remaining/86400000);
-
-  const hours=
-    Math.floor((remaining/3600000)%24);
-
-  const minutes=
-    Math.floor((remaining/60000)%60);
-
-  const seconds=
-    Math.floor((remaining/1000)%60);
+  const days=Math.floor(remaining/86400000);
+  const hours=Math.floor((remaining/3600000)%24);
+  const minutes=Math.floor((remaining/60000)%60);
+  const seconds=Math.floor((remaining/1000)%60);
 
   document.getElementById("days").textContent=
     String(days).padStart(2,"0");
@@ -1627,7 +1595,6 @@ function updateCountdown() {
 }
 
 updateCountdown();
-
 setInterval(updateCountdown,1000);
 
 </script>

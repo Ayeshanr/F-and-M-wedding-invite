@@ -1050,6 +1050,68 @@ body.opened .petals {
 
 <!-- BARAT -->
 
+<sec
+<!-- =====================================
+     BARAT - COMPLETE SECTION
+     ===================================== -->
+
+<style>
+/* BARAT TIMINGS - ORIGINAL DESIGN */
+
+#barat .barat-times {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  max-width: 500px;
+  margin: 25px auto 35px;
+}
+
+#barat .barat-time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 12px;
+  text-align: center;
+}
+
+#barat .barat-time-item + .barat-time-item {
+  border-left: 1px solid rgba(197,161,125,.7);
+}
+
+#barat .barat-time-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 4.5vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ivory);
+}
+
+#barat .barat-time-value {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 5vw, 39px);
+  font-weight: 700;
+  color: var(--softgold);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  #barat .barat-time-item {
+    padding: 16px 6px;
+    gap: 16px;
+  }
+
+  #barat .barat-time-name {
+    font-size: 27px;
+  }
+
+  #barat .barat-time-value {
+    font-size: 31px;
+  }
+}
+</style>
+
 <section class="event-section" id="barat">
 
   <span class="floral tr">❦</span>
@@ -1075,16 +1137,15 @@ body.opened .petals {
       <span class="event-weekday">Saturday</span>
     </div>
 
-    <div class="divider"></div>
+    <!-- SEHRA BANDI AND DEPARTURE -->
 
-    <!-- ORIGINAL SEHRA BANDI LAYOUT -->
-
- <div class="barat-times reveal">
+    <div class="barat-times reveal">
 
       <div class="barat-time-item">
         <span class="barat-time-name">
           Sehra Bandi
         </span>
+
         <span class="barat-time-value">
           9:00 A.M.
         </span>
@@ -1092,8 +1153,9 @@ body.opened .petals {
 
       <div class="barat-time-item">
         <span class="barat-time-name">
-          Departure of Barat
+          Departure of<br>Barat
         </span>
+
         <span class="barat-time-value">
           10:00 A.M.
         </span>
@@ -1102,6 +1164,8 @@ body.opened .petals {
     </div>
 
     <div class="divider"></div>
+
+    <!-- VENUE -->
 
     <div class="location-title reveal">
       Venue:
@@ -1112,6 +1176,8 @@ body.opened .petals {
       Allama Iqbal Block, House #641,<br>
       Multan, Pakistan
     </p>
+
+    <!-- GOOGLE MAPS LOCATION -->
 
     <a class="location-button reveal"
        href="https://maps.app.goo.gl/jKcWC9KTbimDtEUr8?g_st=ic"
@@ -1129,6 +1195,9 @@ body.opened .petals {
   </div>
 
 </section>
+
+<!-- END OF BARAT SECTION -->
+
 
 
 <!-- WALIMA -->

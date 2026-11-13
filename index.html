@@ -11,7 +11,7 @@
 <!-- WHATSAPP PREVIEW -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="You're Invited • Faizan & Muntaha">
-<meta property="og:description" content="Join us for our wedding celebrations • Mehndi 3 December • Walima 6 December 2026">
+<meta property="og:description" content="Join us for our wedding celebrations • Mehndi 3 Dec • Barat 5 Dec • Walima 6 Dec 2026">
 <meta property="og:image" content="https://ayeshanr.github.io/F-and-M-wedding-invite/whatsapp-preview.png">
 <meta property="og:image:secure_url" content="https://ayeshanr.github.io/F-and-M-wedding-invite/whatsapp-preview.png">
 <meta property="og:image:type" content="image/png">
@@ -25,9 +25,7 @@
 
 <style>
 
-/* =====================================
-   COLORS - MATCHING ORIGINAL F/M COVER
-   ===================================== */
+/* COLORS */
 
 :root {
   --deep:#350613;
@@ -63,9 +61,7 @@ button {
   cursor:pointer;
 }
 
-/* =====================================
-   DARK BURGUNDY BACKGROUND
-   ===================================== */
+/* BACKGROUND */
 
 main {
   position:relative;
@@ -131,9 +127,7 @@ section {
   );
 }
 
-/* =====================================
-   FLORAL CORNERS
-   ===================================== */
+/* FLORAL CORNERS */
 
 .floral {
   position:absolute;
@@ -167,9 +161,7 @@ section {
   transform:scale(-1);
 }
 
-/* =====================================
-   FIRST WEDDING ANNOUNCEMENT
-   ===================================== */
+/* FIRST PAGE */
 
 .announcement {
   min-height:100vh;
@@ -185,11 +177,7 @@ section {
   align-items:center;
   justify-content:center;
   gap:clamp(4px,1.1vh,11px);
-}
 
-/* SLOW WRITING APPEARANCE */
-
-.announcement .content {
   opacity:0;
   transform:translateY(22px);
   transition:
@@ -201,8 +189,6 @@ body.invitation-revealed .announcement .content {
   opacity:1;
   transform:translateY(0);
 }
-
-/* SLIGHTLY LARGER FIRST-PAGE FONTS */
 
 .bismillah {
   font-size:clamp(25px,3.5vw,39px);
@@ -259,9 +245,7 @@ body.invitation-revealed .announcement .content {
   margin:7px auto;
 }
 
-/* =====================================
-   SCROLL TO EXPLORE
-   ===================================== */
+/* SCROLL INDICATOR */
 
 .scroll-hint {
   position:absolute;
@@ -293,18 +277,11 @@ body.opened .scroll-hint {
 }
 
 @keyframes bounce {
-  0%,100% {
-    transform:translateY(0);
-  }
-
-  50% {
-    transform:translateY(7px);
-  }
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(7px); }
 }
 
-/* =====================================
-   SECOND PAGE - DATES
-   ===================================== */
+/* DATE INTRODUCTION */
 
 .dates-section {
   min-height:auto;
@@ -334,9 +311,7 @@ body.opened .scroll-hint {
   line-height:1.4;
 }
 
-/* =====================================
-   MEHNDI AND WALIMA
-   ===================================== */
+/* EVENT CARDS */
 
 .event-section {
   padding:85px 22px;
@@ -386,10 +361,7 @@ body.opened .scroll-hint {
 
 .event-date-row {
   display:grid;
-  grid-template-columns:
-    minmax(0,1fr)
-    auto
-    minmax(0,1fr);
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
   align-items:center;
   gap:10px;
   max-width:520px;
@@ -425,13 +397,8 @@ body.opened .scroll-hint {
   );
 }
 
-.event-day::before {
-  left:0;
-}
-
-.event-day::after {
-  right:0;
-}
+.event-day::before { left:0; }
+.event-day::after { right:0; }
 
 .event-time {
   font-size:clamp(21px,4.5vw,30px);
@@ -475,9 +442,43 @@ body.opened .scroll-hint {
   text-decoration:underline;
 }
 
-/* =====================================
-   COUNTDOWN
-   ===================================== */
+/* BARAT CEREMONY TIMES */
+
+.barat-times {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+  max-width:470px;
+  margin:24px auto 12px;
+}
+
+.barat-time-item {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:8px 12px;
+}
+
+.barat-time-item + .barat-time-item {
+  border-left:1px solid rgba(197,161,125,.6);
+}
+
+.barat-time-name {
+  font-size:clamp(19px,3.5vw,27px);
+  font-weight:600;
+  line-height:1.15;
+}
+
+.barat-time-value {
+  font-size:clamp(21px,4vw,29px);
+  color:var(--softgold);
+  font-weight:600;
+  white-space:nowrap;
+}
+
+/* COUNTDOWN */
 
 .countdown-section {
   padding:85px 20px;
@@ -532,9 +533,7 @@ body.opened .scroll-hint {
   font-size:clamp(22px,4vw,32px);
 }
 
-/* =====================================
-   FINAL BLESSINGS
-   ===================================== */
+/* BLESSINGS */
 
 .blessing-section {
   padding:90px 22px 120px;
@@ -564,9 +563,7 @@ body.opened .scroll-hint {
   max-width:520px;
 }
 
-/* =====================================
-   ORIGINAL F/M TWO-DOOR COVER
-   ===================================== */
+/* ORIGINAL F/M COVER */
 
 .cover {
   position:fixed;
@@ -593,8 +590,6 @@ body.opened .scroll-hint {
   background-size:200% 100%;
   backface-visibility:hidden;
   transform-style:preserve-3d;
-
-  /* SLOWER DOOR OPENING */
   transition:transform 2.8s cubic-bezier(.45,0,.2,1);
 }
 
@@ -627,14 +622,7 @@ body.opened .scroll-hint {
   display:none;
 }
 
-/*
-  NO EXTRA TAP TO OPEN TEXT.
-  IT IS ALREADY PRINTED ON cover.jpg.
-*/
-
-/* =====================================
-   MUSIC BUTTON
-   ===================================== */
+/* MUSIC BUTTON */
 
 .music-button {
   position:fixed;
@@ -654,9 +642,7 @@ body.opened .scroll-hint {
   display:none;
 }
 
-/* =====================================
-   SPARKLES
-   ===================================== */
+/* SPARKLES */
 
 .sparkles {
   position:fixed;
@@ -684,16 +670,13 @@ body.opened .sparkles {
     opacity:0;
     transform:translateY(15px);
   }
-
   50% {
     opacity:.65;
     transform:translateY(-15px);
   }
 }
 
-/* =====================================
-   SLOW FALLING PETALS
-   ===================================== */
+/* FALLING PETALS */
 
 .petals {
   position:fixed;
@@ -730,30 +713,15 @@ body.opened .petals {
 }
 
 .petal.gold .petal-shape {
-  background:linear-gradient(
-    135deg,
-    #e2c9a6,
-    #c5a17d 45%,
-    #9c7654
-  );
+  background:linear-gradient(135deg,#e2c9a6,#c5a17d 45%,#9c7654);
 }
 
 .petal.burgundy .petal-shape {
-  background:linear-gradient(
-    135deg,
-    #a04d61,
-    #75213c 45%,
-    #4b1025
-  );
+  background:linear-gradient(135deg,#a04d61,#75213c 45%,#4b1025);
 }
 
 .petal.ivory .petal-shape {
-  background:linear-gradient(
-    135deg,
-    #f4e8da,
-    #dfcbb6 50%,
-    #bfa58d
-  );
+  background:linear-gradient(135deg,#f4e8da,#dfcbb6 50%,#bfa58d);
 }
 
 @keyframes petal-fall {
@@ -761,45 +729,27 @@ body.opened .petals {
     transform:translate3d(0,-40px,0);
     opacity:0;
   }
-
   8%,88% {
     opacity:.4;
   }
-
   100% {
-    transform:translate3d(
-      var(--drift),
-      calc(100vh + 100px),
-      0
-    );
+    transform:translate3d(var(--drift),calc(100vh + 100px),0);
     opacity:0;
   }
 }
 
 @keyframes petal-spin {
-  0% {
-    transform:rotate(-35deg) rotateY(0deg);
-  }
-
-  50% {
-    transform:rotate(20deg) rotateY(75deg);
-  }
-
-  100% {
-    transform:rotate(80deg) rotateY(170deg);
-  }
+  0% { transform:rotate(-35deg) rotateY(0deg); }
+  50% { transform:rotate(20deg) rotateY(75deg); }
+  100% { transform:rotate(80deg) rotateY(170deg); }
 }
 
-/* =====================================
-   SCROLL REVEAL
-   ===================================== */
+/* SCROLL REVEAL */
 
 .reveal {
   opacity:0;
   transform:translateY(20px);
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
+  transition:opacity .8s ease,transform .8s ease;
 }
 
 .reveal.visible {
@@ -807,26 +757,17 @@ body.opened .petals {
   transform:translateY(0);
 }
 
-/* FIRST PAGE APPEARS TOGETHER */
-
 .announcement .reveal {
   opacity:1;
   transform:none;
   transition:none;
 }
 
-/* =====================================
-   IPHONE AND MOBILE
-   ===================================== */
+/* MOBILE */
 
 @media(max-width:600px) {
-  .cover {
-    height:100svh;
-  }
-
-  .cover-door {
-    height:100%;
-  }
+  .cover { height:100svh; }
+  .cover-door { height:100%; }
 }
 
 @media(max-width:480px) {
@@ -840,41 +781,15 @@ body.opened .petals {
     gap:clamp(3px,.75vh,7px);
   }
 
-  .announcement .bismillah {
-    font-size:21px;
-  }
-
-  .announcement .intro {
-    font-size:13px;
-  }
-
-  .announcement .parents {
-    font-size:17px;
-  }
-
-  .announcement .invite {
-    font-size:15px;
-  }
-
-  .announcement .ceremony {
-    font-size:24px;
-  }
-
-  .announcement .name {
-    font-size:clamp(41px,9.3vw,56px);
-  }
-
-  .announcement .with {
-    font-size:33px;
-  }
-
-  .announcement .daughter {
-    font-size:15px;
-  }
-
-  .announcement .ornament {
-    margin:5px auto;
-  }
+  .announcement .bismillah { font-size:21px; }
+  .announcement .intro { font-size:13px; }
+  .announcement .parents { font-size:17px; }
+  .announcement .invite { font-size:15px; }
+  .announcement .ceremony { font-size:24px; }
+  .announcement .name { font-size:clamp(41px,9.3vw,56px); }
+  .announcement .with { font-size:33px; }
+  .announcement .daughter { font-size:15px; }
+  .announcement .ornament { margin:5px auto; }
 
   .event-section {
     padding:75px 14px;
@@ -890,6 +805,23 @@ body.opened .petals {
 
   .event-day {
     padding:0 10px;
+  }
+
+  .barat-times {
+    margin:20px auto 10px;
+  }
+
+  .barat-time-item {
+    padding:8px 5px;
+    gap:7px;
+  }
+
+  .barat-time-name {
+    font-size:18px;
+  }
+
+  .barat-time-value {
+    font-size:21px;
   }
 
   .countdown-section {
@@ -953,16 +885,12 @@ body.opened .petals {
 
 <body>
 
-<!-- SPARKLES AND PETALS -->
-
 <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 <div class="petals" id="petals" aria-hidden="true"></div>
 
 <main>
 
-<!-- =====================================
-     FIRST PAGE
-     ===================================== -->
+<!-- FIRST PAGE -->
 
 <section class="announcement" id="welcome">
 
@@ -980,9 +908,7 @@ body.opened .petals {
       and hearts filled with joy
     </p>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
     <div class="parents reveal">
       Mr. & Mrs. Mehmood Iqbal Sheikh
@@ -1016,9 +942,7 @@ body.opened .petals {
       Daughter of Mr. & Mrs. Zubair
     </p>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
   </div>
 
@@ -1029,9 +953,7 @@ body.opened .petals {
 
 </section>
 
-<!-- =====================================
-     SECOND PAGE - DATES
-     ===================================== -->
+<!-- DATES PAGE -->
 
 <section class="dates-section" id="dates">
 
@@ -1054,17 +976,13 @@ body.opened .petals {
       DECEMBER 2026
     </div>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
   </div>
 
 </section>
 
-<!-- =====================================
-     MEHNDI
-     ===================================== -->
+<!-- MEHNDI -->
 
 <section class="event-section" id="mehndi">
 
@@ -1087,17 +1005,9 @@ body.opened .petals {
 
     <div class="event-date-row reveal">
 
-      <span class="event-month">
-        December
-      </span>
-
-      <span class="event-day">
-        03
-      </span>
-
-      <span class="event-weekday">
-        Thursday
-      </span>
+      <span class="event-month">December</span>
+      <span class="event-day">03</span>
+      <span class="event-weekday">Thursday</span>
 
     </div>
 
@@ -1135,9 +1045,97 @@ body.opened .petals {
 
 </section>
 
-<!-- =====================================
-     WALIMA
-     ===================================== -->
+<!-- BARAT - NEW CARD -->
+
+<section class="event-section" id="barat">
+
+  <span class="floral tr">❦</span>
+  <span class="floral bl">❦</span>
+
+  <div class="content event-invitation">
+
+    <p class="join-us reveal">
+      Join Us to Celebrate
+    </p>
+
+    <h2 class="event-heading reveal">
+      The Barat
+    </h2>
+
+    <div class="event-year reveal">
+      2026
+    </div>
+
+    <div class="event-date-row reveal">
+
+      <span class="event-month">
+        December
+      </span>
+
+      <span class="event-day">
+        05
+      </span>
+
+      <span class="event-weekday">
+        Saturday
+      </span>
+
+    </div>
+
+    <!-- SEHRA BANDI AND DEPARTURE TIMES -->
+
+    <div class="barat-times reveal">
+
+      <div class="barat-time-item">
+        <span class="barat-time-name">
+          Sehra Bandi
+        </span>
+        <span class="barat-time-value">
+          9:00 A.M.
+        </span>
+      </div>
+
+      <div class="barat-time-item">
+        <span class="barat-time-name">
+          Departure of Barat
+        </span>
+        <span class="barat-time-value">
+          10:00 A.M.
+        </span>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="location-title reveal">
+      Venue:
+    </div>
+
+    <p class="venue reveal">
+      MDA Cooperative Society, Gate #2,<br>
+      Allama Iqbal Block, House #641,<br>
+      Multan, Pakistan
+    </p>
+
+    <a class="location-button reveal"
+       href="https://www.google.com/maps/search/?api=1&amp;query=MDA+Cooperative+Society+Gate+2+Allama+Iqbal+Block+House+641+Multan+Pakistan"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Search for Barat venue in Google Maps">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
+      </svg>
+
+      LOCATION
+    </a>
+
+  </div>
+
+</section>
+
+<!-- WALIMA -->
 
 <section class="event-section" id="walima">
 
@@ -1160,17 +1158,9 @@ body.opened .petals {
 
     <div class="event-date-row reveal">
 
-      <span class="event-month">
-        December
-      </span>
-
-      <span class="event-day">
-        06
-      </span>
-
-      <span class="event-weekday">
-        Sunday
-      </span>
+      <span class="event-month">December</span>
+      <span class="event-day">06</span>
+      <span class="event-weekday">Sunday</span>
 
     </div>
 
@@ -1206,17 +1196,13 @@ body.opened .petals {
 
 </section>
 
-<!-- =====================================
-     COUNTDOWN
-     ===================================== -->
+<!-- COUNTDOWN -->
 
 <section class="countdown-section">
 
   <div class="content countdown-frame">
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
     <h2 class="countdown-heading reveal">
       Counting Down to Our Mehndi
@@ -1246,17 +1232,13 @@ body.opened .petals {
 
     </div>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
   </div>
 
 </section>
 
-<!-- =====================================
-     FINAL BLESSINGS
-     ===================================== -->
+<!-- FINAL BLESSINGS -->
 
 <section class="blessing-section">
 
@@ -1282,9 +1264,7 @@ body.opened .petals {
       this blessed occasion with you.
     </p>
 
-    <div class="ornament">
-      ❧ ✦ ❧
-    </div>
+    <div class="ornament">❧ ✦ ❧</div>
 
     <p class="invite reveal">
       With Love,<br>
@@ -1297,9 +1277,7 @@ body.opened .petals {
 
 </main>
 
-<!-- =====================================
-     ORIGINAL F/M COVER
-     ===================================== -->
+<!-- ORIGINAL BURGUNDY F/M COVER -->
 
 <div class="cover"
      id="cover"
@@ -1312,9 +1290,7 @@ body.opened .petals {
 
 </div>
 
-<!-- =====================================
-     WEDDING MUSIC
-     ===================================== -->
+<!-- WEDDING MUSIC -->
 
 <audio id="music" loop preload="auto">
   <source src="wedding-music.m4a" type="audio/mp4">
@@ -1330,9 +1306,7 @@ body.opened .petals {
 
 <script>
 
-/* =====================================
-   COVER OPENING
-   ===================================== */
+/* COVER OPENING */
 
 const cover=document.getElementById("cover");
 const music=document.getElementById("music");
@@ -1359,33 +1333,23 @@ function openInvitation() {
 
   if(cover.classList.contains("open")) return;
 
-  // Begin opening both doors
   cover.classList.add("open");
 
-  /*
-    Start the writing fade-in shortly after
-    the doors begin moving.
-
-    The writing appears gradually while
-    the doors are still opening.
-  */
-
+  // Slowly reveal first-page writing
   setTimeout(()=>{
     document.body.classList.add("invitation-revealed");
   },350);
 
-  // Start music
   musicButton.hidden=false;
   music.play().catch(updateMusicButton);
 
-  // Finish opening after 2.8 seconds
+  // Finish opening doors
   setTimeout(()=>{
 
     cover.classList.add("hidden");
     document.body.classList.add("opened");
 
     window.scrollTo(0,0);
-
     revealVisible();
 
   },2900);
@@ -1397,28 +1361,20 @@ cover.addEventListener("click",openInvitation);
 cover.addEventListener("keydown",event=>{
 
   if(event.key==="Enter"||event.key===" ") {
-
     event.preventDefault();
     openInvitation();
-
   }
 
 });
 
-/* =====================================
-   MUSIC BUTTON
-   ===================================== */
+/* MUSIC */
 
 musicButton.addEventListener("click",()=>{
 
   if(music.paused) {
-
     music.play().catch(updateMusicButton);
-
   } else {
-
     music.pause();
-
   }
 
 });
@@ -1426,9 +1382,7 @@ musicButton.addEventListener("click",()=>{
 music.addEventListener("play",updateMusicButton);
 music.addEventListener("pause",updateMusicButton);
 
-/* =====================================
-   SPARKLES
-   ===================================== */
+/* SPARKLES */
 
 const sparkleArea=document.getElementById("sparkles");
 
@@ -1446,36 +1400,24 @@ for(let i=0;i<35;i++) {
   dot.style.width=size+"px";
   dot.style.height=size+"px";
 
-  dot.style.animationDelay=
-    (-Math.random()*8)+"s";
-
-  dot.style.animationDuration=
-    (4+Math.random()*5)+"s";
+  dot.style.animationDelay=(-Math.random()*8)+"s";
+  dot.style.animationDuration=(4+Math.random()*5)+"s";
 
   sparkleArea.appendChild(dot);
 
 }
 
-/* =====================================
-   SLOW FALLING PETALS
-   ===================================== */
+/* SLOW FALLING PETALS */
 
 const petalArea=document.getElementById("petals");
-
-const petalColors=[
-  "gold",
-  "burgundy",
-  "ivory"
-];
+const petalColors=["gold","burgundy","ivory"];
 
 for(let i=0;i<15;i++) {
 
   const petal=document.createElement("span");
   const petalShape=document.createElement("span");
 
-  petal.className=
-    "petal "+petalColors[i%3];
-
+  petal.className="petal "+petalColors[i%3];
   petalShape.className="petal-shape";
 
   petal.style.left=Math.random()*100+"%";
@@ -1494,34 +1436,25 @@ for(let i=0;i<15;i++) {
   const duration=25+Math.random()*15;
 
   petal.style.animationDuration=duration+"s";
-
-  petal.style.animationDelay=
-    (-Math.random()*duration)+"s";
-
-  petalShape.style.animationDuration=
-    (3+Math.random()*5)+"s";
+  petal.style.animationDelay=(-Math.random()*duration)+"s";
+  petalShape.style.animationDuration=(3+Math.random()*5)+"s";
 
   petal.appendChild(petalShape);
   petalArea.appendChild(petal);
 
 }
 
-/* =====================================
-   SCROLL REVEAL
-   ===================================== */
+/* SCROLL REVEAL */
 
-const revealItems=
-  document.querySelectorAll(".reveal");
+const revealItems=document.querySelectorAll(".reveal");
 
 const observer=new IntersectionObserver(entries=>{
 
   entries.forEach(entry=>{
 
     if(entry.isIntersecting) {
-
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
-
     }
 
   });
@@ -1535,18 +1468,14 @@ function revealVisible() {
   revealItems.forEach(item=>{
 
     if(item.getBoundingClientRect().top<innerHeight) {
-
       item.classList.add("visible");
-
     }
 
   });
 
 }
 
-/* =====================================
-   COUNTDOWN - PAKISTAN TIME
-   ===================================== */
+/* COUNTDOWN - PAKISTAN TIME */
 
 const eventTime=
   new Date("2026-12-03T18:00:00+05:00").getTime();
@@ -1561,7 +1490,6 @@ function updateCountdown() {
       '<div class="countdown-finished">The Celebration Has Begun!</div>';
 
     return;
-
   }
 
   const days=Math.floor(remaining/86400000);
